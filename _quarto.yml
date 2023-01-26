@@ -2,18 +2,20 @@ project:
   type: website
 
 website:
-  title: "../Daniele_Scanzi/"
+  title: "~/Daniele-Scanzi"
   navbar:
     right:
-      - text: About
-        file: about.qmd
       - text: Projects
       - text: Posts
+    
 format:
   html:
-    theme: solar
+    theme: 
+      dark: [cyborg, mystyles.scss]
+      light: [cyborg, cyborg_light.scss]
     css: styles.css
     toc: true
 
 editor: visual
+
 
