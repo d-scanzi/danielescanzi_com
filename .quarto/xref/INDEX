@@ -4,5 +4,38 @@
   },
   "about.qmd": {
     "about.html": "dffb25fa"
+  },
+  "posts_settings.qmd": {
+    "posts_settings.html": "2edc8de5"
+  },
+  "posts/k_means_simulation.qmd": {
+    "k_means_simulation.html": "4cb6e27f"
+  },
+  "posts.qmd": {
+    "posts.html": "d851e450"
+  },
+  "posts/2022-10-03-k-means-clustering/index.qmd": {
+    "index.html": "1a27386b"
+  },
+  "daniele_useful_code_r_intro.qmd": {
+    "daniele_useful_code_r_intro.html": "406df8b1"
+  },
+  "projects/daniele_useful_code_r_intro.qmd": {
+    "daniele_useful_code_r_intro.html": "7afc8b6d"
+  },
+  "projects/tidy_eegutils.qmd": {
+    "tidy_eegutils.html": "bffdeb70"
+  },
+  "projects/code_intro.qmd": {
+    "code_intro.html": "dd0b2459"
+  },
+  "projects/daniele_useful_code_r/daniele_useful_code_r_intro.qmd": {
+    "daniele_useful_code_r_intro.html": "3caaaaa4"
+  },
+  "projects/daniele_useful_code_r/tidy_eegutils.qmd": {
+    "tidy_eegutils.html": "0f7477c9"
+  },
+  "projects/daniele_useful_code_r/daniele_useful_code_r_eeg.qmd": {
+    "daniele_useful_code_r_eeg.html": "7ae03304"
   }
 }

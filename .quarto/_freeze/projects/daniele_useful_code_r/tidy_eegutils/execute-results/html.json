@@ -1,0 +1,14 @@
+{
+  "hash": "a69564f22e1a75eb417405fff70b2933",
+  "result": {
+    "markdown": "---\ntitle: \"From eegUtils to tidy data\"\n---\n\n[eegUtils](https://craddm.github.io/eegUtils/articles/eegUtils.html) is an R package developed by Matt Craddock that allows you to analyse EEG data in R. Currently, I pre-process data in Matlab with [EEGLAB](https://eeglab.org/). Thus, I use `eegUtils` to load pre-processed and epoched data in R to conduct statistical analysis. Although `eegUils` is a handy package, and I love that I can easily use R to do EEG data analysis and plot scalp topographies, some aspects of this package do not align with my preferences. Specifically:\n\n* The voltage data is stored in wide format, with one column for each electrode\n* Time information is stored separately from the EEG signal information\n\nConsequently, I find it easier to extract the data I care about (voltage, electrode names and time values) and store those in a long-format `tibble`. As I do this often, I wrote a function for this. \n\n*Note that some of the functions you find in the other paragraphs require the data extracted from `eegUtils` using this function. I highlighted when this is the case*\n\n\n::: {.cell}\n\n```{.r .cell-code}\ntidy_signal_from_eegUtils <- function(eegUtilsDataset) {\n  \n  tidy_data <- eegUtilsDataset %>% \n  # Add time column\n  dplyr::mutate(time = signal[[\"timings\"]][[\"time\"]]) %>% \n  # Reorganise the dataset \n  dplyr::pivot_longer(cols      = !time,\n               names_to  = \"electrode\",\n               values_to = \"volt\") \n  \n  return(tidy_data)\n  }\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

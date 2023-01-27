@@ -1,0 +1,12 @@
+---
+title: "Posts"
+listing:
+  # Folder  where the posts are stored
+  contents: posts
+  sort: "date desc"
+  # Add categories on the side of the blog
+  categories: true
+  # Date format
+  date-format: "long"
+sidebar: false
+---
