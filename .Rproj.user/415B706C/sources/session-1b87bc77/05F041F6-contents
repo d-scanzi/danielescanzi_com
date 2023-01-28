@@ -1,5 +1,0 @@
----
-title: "Daniele's useful R code for EEG data analysis"
----
-
-The idea for this document comes from [Makoto's useful EEGLAB code](https://sccn.ucsd.edu/wiki/Makoto's_useful_EEGLAB_code). The idea behind this document is to have a place to store code that I produce while working on my projects and that I find useful. Besides being a somewhat unstructured place to save code that I could use in the future, this document might be helpful for researchers interested in using R to analyse EEG data.
