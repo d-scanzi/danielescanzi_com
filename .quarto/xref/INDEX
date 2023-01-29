@@ -37,5 +37,11 @@
   },
   "projects/daniele_useful_code_r/daniele_useful_code_r_eeg.qmd": {
     "daniele_useful_code_r_eeg.html": "7ae03304"
+  },
+  "exploring/exploring_intro.qmd": {
+    "exploring_intro.html": "d48931ba"
+  },
+  "exploring/monte_avaro.qmd": {
+    "monte_avaro.html": "dac10fe0"
   }
 }

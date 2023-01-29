@@ -1,0 +1,33 @@
+---
+title: "test_maps"
+---
+
+```{r}
+map <- leaflet() %>% 
+    addTiles() %>% 
+    fitBounds(lng1 = 175.60234014624888 - .1, lng2 = 175.60234014624888 + .1, lat1 = -37.043694801717365 - .1, lat2 = -37.043694801717365) %>% 
+    addPolylines(data = track$geometry, 
+                 color = "black",
+                 opacity = 1,
+                 weight = 2.5,
+                 ) %>% 
+    addProviderTiles(provider = providers$OpenTopoMap) %>% 
+    addMarkers(lng = 175.60234014624888, lat = -37.043694801717365)
+```
+
+```{r}
+awesome <- makeAwesomeIcon(
+  icon = "fire",
+  iconColor = "black",
+  markerColor = "blue",
+  library = "fa"
+)
+```
+
+
+```{r}
+track <- st_read("D:\\dataset\\geospatial_data\\DOC_tracks.geojson") %>% 
+    filter(DESCRIPTION %in% c("Waiotahi to Karaka Tramping Track",
+                              "Karaka to Crosbies Hut Tramping Track"))
+```
+
