@@ -15,7 +15,7 @@ website:
     - title: "Projects"
       style: "floating"
       contents:
-        - projects/code_intro.qmd
+        - projects/projects_intro.qmd
         - section: "EEG"
           contents:
             - projects/daniele_useful_code_r/daniele_useful_code_r_eeg.qmd

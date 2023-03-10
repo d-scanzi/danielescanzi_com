@@ -1,0 +1,41 @@
+project:
+  type: website
+
+website:
+  title: "~/Daniele-Scanzi"
+  navbar:
+    right:
+      - text: "Projects"
+        file: projects/code_intro.qmd
+      - posts.qmd
+      - text: "Exploring"
+        file: exploring/exploring_intro.qmd
+        
+  sidebar:
+    - title: "Projects"
+      style: "floating"
+      contents:
+        - projects/projects_intro.qmd
+        - section: "EEG"
+          contents:
+            - projects/daniele_useful_code_r/daniele_useful_code_r_eeg.qmd
+            
+    - title: "Exploring"
+      style: "floating"
+      contents: 
+        - exploring/exploring_intro.qmd
+        - section: "Italy"
+          contents: 
+            - exploring/monte_avaro.qmd
+    
+format:
+  html:
+    theme: 
+      dark: [cyborg, mystyles.scss]
+      light: [cyborg, cyborg_light.scss]
+    css: styles.css
+    toc: true
+
+editor: visual
+
+
