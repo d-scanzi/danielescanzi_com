@@ -43,5 +43,35 @@
   },
   "exploring/monte_avaro.qmd": {
     "monte_avaro.html": "dac10fe0"
+  },
+  "projects/projects_intro.qmd": {
+    "projects_intro.html": "6cd52bc0"
+  },
+  "posts/2023-02-13-coloured-gabors-psychopy/index.qmd": {
+    "index.html": "1fb97d10"
+  },
+  "projects/bayesian_stat_material/00_intro.qmd": {
+    "00_intro.html": "1d14639e"
+  },
+  "projects/bayesian_stat_material/01_first_chapter.qmd": {
+    "01_first_chapter.html": "6245b2f3"
+  },
+  "projects/bayesian_stat_material/03_model_engines.qmd": {
+    "03_model_engines.html": "9c000b22"
+  },
+  "projects/bayesian_stat_material/bayes_intro.qmd": {
+    "bayes_intro.html": "abb3eb7f"
+  },
+  "projects/bayesian_stat_material/slide_00.qmd": {
+    "slide_00.html": "ce276c84"
+  },
+  "projects/bayesian_stat_material/slide_01.qmd": {
+    "slide_01.html": "4fa0db05"
+  },
+  "projects/bayesian_stat_material/slide_02.qmd": {
+    "slide_02.html": "4df02fcc"
+  },
+  "projects/bayesian_stat_material/slides_list.qmd": {
+    "slides_list.html": "5894288b"
   }
 }

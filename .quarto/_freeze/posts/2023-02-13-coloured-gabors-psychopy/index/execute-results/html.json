@@ -1,0 +1,16 @@
+{
+  "hash": "7d91ae20952a1b003739bc3e85b3f79d",
+  "result": {
+    "markdown": "---\ntitle: \"Creating coloured Gabor stimuli with Psychopy\"\nauthor: \"Daniele Scanzi\"\ndate: \"2023/02/13\"\ndescription: \"How to use Psychopy to create coloured Gabor patches or grating stimuli\" \ncategories: [Python, coding, experiments]\n---\n\n\n\n## Gabor patches in Psychopy\n\nSome of the work I am involved in requires the use of Gabor patches. These are formally defined as *sinusoidal gratings convolved with a Gaussian kernel*. The definition looks scarier than it is. Let's look to a Gabor to understand why\n\nAs you can see, this stimulus is pretty simple, a bunch of black and white stripes that fade along their extremities. *Lines* and *fading* are the key points to understanding the definition. Indeed, we can create a parallel between *lines* and *sinusoidal grating* and between *fading* and *Gaussian kernel*. \n\nTo create a series of black-and-white lines, we can use a sinusoid. Think about this, a sinusoid is a function that fluctuates up and down. We can use it to describe continuous and repeating fluctuations between two states, for instance, between two **opposite** colours, like black and white. To do this, we set that the peak value of the sinusoid represents black, while the trough value black. Everything in between is a graded shade of grey.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.1      ✔ purrr   1.0.1 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n```\n:::\n\n```{.r .cell-code}\nsamples  <- seq(1, 10, by = 0.0001)\nsinusoid <- sin(2*pi*1*samples)\n\nsimple_sine <- data.frame(x = samples, y = sinusoid) %>% \n    ggplot(aes(x=x, y=y)) +\n    geom_line(size = 1.5) +\n    theme_minimal()\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n```\n:::\n\n```{.r .cell-code}\ndata.frame(x = samples, y = sinusoid) %>% \n    ggplot(aes(x=x, y=y, colour = sinusoid)) +\n    geom_line(size = 1.5) +\n    scale_colour_gradient(low = \"black\", high = \"white\") +\n    theme_minimal()\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
