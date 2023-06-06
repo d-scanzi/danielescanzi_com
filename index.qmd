@@ -16,4 +16,4 @@ about:
 sidebar: false
 ---
 
-I spend my day looking at squiggly lines produced by your brain. I would love to know how a bat sees the world. One day [I ate five razorblades in front of 400 people](https://www.youtube.com/watch?v=Naj6pttO73w).
+I spend my day looking at squiggly lines produced by your brain. I would love to know how a bat sees the world. [One day I ate five razorblades in front of 400 people](https://www.youtube.com/watch?v=Naj6pttO73w).
