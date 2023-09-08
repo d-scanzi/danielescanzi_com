@@ -2,37 +2,18 @@
 title: "Daniele's useful R code for EEG data analysis"
 ---
 
-The idea for this document comes from [Makoto's useful EEGLAB
-code](https://sccn.ucsd.edu/wiki/Makoto's_useful_EEGLAB_code). The
-intention behind this document is to have a place to store code that I
-produce while working on my projects and that I find useful. Besides
-being a somewhat unstructured place to save code that I could use in the
-future, this document might be helpful for researchers interested in
-using R to analyse EEG data.
+The idea for this document comes from [Makoto's useful EEGLAB code](https://sccn.ucsd.edu/wiki/Makoto's_useful_EEGLAB_code). The intention behind this document is to have a place to store code that I produce while working on my projects and that I find useful. Besides being a somewhat unstructured place to save code that I could use in the future, this document might be helpful for researchers interested in using R to analyse EEG data.
 
 ## From eegUtils to tidy data
 
-[eegUtils](https://craddm.github.io/eegUtils/articles/eegUtils.html) is
-an R package developed by Matt Craddock that allows you to analyse EEG
-data in R. Currently, I pre-process data in Matlab with
-[EEGLAB](https://eeglab.org/). Thus, I use `eegUtils` to load
-pre-processed and epoched data in R to conduct statistical analysis.
-Although `eegUils` is a handy package, and I love that I can easily use
-R to do EEG data analysis and plot scalp topographies, some aspects of
-this package do not align with my preferences. Specifically:
+[eegUtils](https://craddm.github.io/eegUtils/articles/eegUtils.html) is an R package developed by Matt Craddock that allows you to analyse EEG data in R. Currently, I pre-process data in Matlab with [EEGLAB](https://eeglab.org/). Thus, I use `eegUtils` to load pre-processed and epoched data in R to conduct statistical analysis. Although `eegUils` is a handy package, and I love that I can easily use R to do EEG data analysis and plot scalp topographies, some aspects of this package do not align with my preferences. Specifically:
 
--   The voltage data is stored in wide format, with one column for each
-    electrode
--   Time information is stored separately from the EEG signal
-    information
+-   The voltage data is stored in wide format, with one column for each electrode
+-   Time information is stored separately from the EEG signal information
 
-Consequently, I find it easier to extract the data I care about
-(voltage, electrode names and time values) and store those in a
-long-format `tibble`. As I do this often, I wrote a function for this.
+Consequently, I find it easier to extract the data I care about (voltage, electrode names and time values) and store those in a long-format `tibble`. As I do this often, I wrote a function for this.
 
-*Note that some of the functions you find in the other paragraphs
-require the data extracted from `eegUtils` using this function. I
-highlighted when this is the case*
+*Note that some of the functions you find in the other paragraphs require the data extracted from `eegUtils` using this function. I highlighted when this is the case*
 
 ```{r}
 #| eval: false
@@ -54,34 +35,21 @@ tidy_signal_from_eegUtils <- function(eegUtilsDataset) {
 
 ## Computing ERP amplitudes
 
-The following code presupposes that the EEG data is stored in a
-`dataframe` or `tibble` in long format. The dataset must contain three
-columns:
+The following code presupposes that the EEG data is stored in a `dataframe` or `tibble` in long format. The dataset must contain three columns:
 
 -   *time*: time in ms for each sample
 -   *electrode*: electrode name
 -   *volt*: the voltage value for each sample
 
-To create such a dataset from a file loaded through
-[eegUtils](https://craddm.github.io/eegUtils/articles/eegUtils.html) see
-working with eegUtils.
+To create such a dataset from a file loaded through [eegUtils](https://craddm.github.io/eegUtils/articles/eegUtils.html) see working with eegUtils.
 
-There are two common ways to compute an ERP amplitude: average amplitude
-and peak amplitude. Average amplitude involves averaging the microvolts
-of a signal over a specified time range (where the ERP is expected). The
-peak amplitude consists in finding the maximum value of a peak or the
-minimum value of a trough. Peaks and troughs are the ERPs. Remember that
-peak amplitudes have drawbacks, and the average amplitude should be
-preferred.
+There are two common ways to compute an ERP amplitude: average amplitude and peak amplitude. Average amplitude involves averaging the microvolts of a signal over a specified time range (where the ERP is expected). The peak amplitude consists in finding the maximum value of a peak or the minimum value of a trough. Peaks and troughs are the ERPs. Remember that peak amplitudes have drawbacks, and the average amplitude should be preferred.
 
-Here are some functions to compute both values. I also provide a wrapper
-function that extract both average and peak amplitudes.
+Here are some functions to compute both values. I also provide a wrapper function that extract both average and peak amplitudes.
 
 ### Extracting time bins
 
-For flexibility, we need a function to select the signal within a
-specific time bin. We will use this function to allow the user to define
-the time range where to extract the average and peak values.
+For flexibility, we need a function to select the signal within a specific time bin. We will use this function to allow the user to define the time range where to extract the average and peak values.
 
 ```{r}
 #| eval: false
@@ -120,8 +88,7 @@ extract_bin_signal <- function(eegDataset, bin = NULL) {
 
 ### Compute average amplitude
 
-To extract the average amplitude, we can simply compute the mean of the
-voltage for each electrode.
+To extract the average amplitude, we can simply compute the mean of the voltage for each electrode.
 
 ```{r}
 #| eval: false
@@ -142,20 +109,9 @@ find_average_amplitudes <- function(eegDataset) {
 
 ### Compute the peak amplitude
 
-This function is quite complex. The complexity is driven by the fact
-that an ERP can be any positive or negative deflection in an EEG signal.
-For a positive deflection, we want to find its maximum value. For a
-negative deflection, we want to find the minimum value. To do this, we
-use the `findpeaks` function of the
-[pracma](https://cran.r-project.org/web/packages/pracma/index.html)
-package. As this function finds only the local peaks of a signal, to
-find the local minima we will multiply the signal by `-1` to invert
-peaks and troughs.
+This function is quite complex. The complexity is driven by the fact that an ERP can be any positive or negative deflection in an EEG signal. For a positive deflection, we want to find its maximum value. For a negative deflection, we want to find the minimum value. To do this, we use the `findpeaks` function of the [pracma](https://cran.r-project.org/web/packages/pracma/index.html) package. As this function finds only the local peaks of a signal, to find the local minima we will multiply the signal by `-1` to invert peaks and troughs.
 
-Note that this function is quite flexible as the user is able to select
-whether to extract only peak, only troughs or both amplitudes.
-Importantly, as a signal might have only peaks and not troughs, or vice
-versa, if one or the other is not found, an `NA` is produced.
+Note that this function is quite flexible as the user is able to select whether to extract only peak, only troughs or both amplitudes. Importantly, as a signal might have only peaks and not troughs, or vice versa, if one or the other is not found, an `NA` is produced.
 
 ```{r}
 #|eval: false
@@ -299,15 +255,10 @@ find_peak_amplitudes <- function(eegDataset, peaks = TRUE, valleys = TRUE) {
 
 ### Wrapper function for ERP amplitudes
 
-The above functions can be used separately. However, it could be handy
-to have a wrapper function that allows the user to compute both peak and
-average amplitudes simultaneously. Again, the following function is
-highly flexible, allowing the user to:
+The above functions can be used separately. However, it could be handy to have a wrapper function that allows the user to compute both peak and average amplitudes simultaneously. Again, the following function is highly flexible, allowing the user to:
 
--   Define a time bin where to compute the amplitude measures. If no bin
-    is provided, the whole signal is used
--   Selecting whether to extract the only peak, only troughs, only
-    averages amplitude or any combination of those
+-   Define a time bin where to compute the amplitude measures. If no bin is provided, the whole signal is used
+-   Selecting whether to extract the only peak, only troughs, only averages amplitude or any combination of those
 
 ```{r}
 #| eval: false

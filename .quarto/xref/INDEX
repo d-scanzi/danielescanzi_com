@@ -73,5 +73,11 @@
   },
   "projects/bayesian_stat_material/slides_list.qmd": {
     "slides_list.html": "5894288b"
+  },
+  "posts/2023-06-08-competence-vs-competitiveness/index.qmd": {
+    "index.html": "6dec705e"
+  },
+  "projects/psychopy_code/coloured_gabor_patches.qmd": {
+    "coloured_gabor_patches.html": "a10c7594"
   }
 }

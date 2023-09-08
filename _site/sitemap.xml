@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://danielescanzi.netlify.app/about.html</loc>
-    <lastmod>2023-06-06T09:29:15.152Z</lastmod>
+    <lastmod>2023-06-12T22:43:42.690Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/exploring/exploring_intro.html</loc>
-    <lastmod>2023-06-06T09:29:17.676Z</lastmod>
+    <lastmod>2023-06-12T22:43:43.977Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/exploring/monte_avaro.html</loc>
-    <lastmod>2023-06-06T09:29:18.524Z</lastmod>
+    <lastmod>2023-06-12T22:43:44.712Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/index.html</loc>
-    <lastmod>2023-06-06T09:29:19.333Z</lastmod>
+    <lastmod>2023-06-12T22:43:45.422Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/posts/2022-10-03-k-means-clustering/index.html</loc>
-    <lastmod>2023-06-06T09:29:21.408Z</lastmod>
+    <lastmod>2023-06-12T22:43:47.323Z</lastmod>
   </url>
   <url>
-    <loc>https://danielescanzi.netlify.app/posts/2023-02-13-coloured-gabors-psychopy/index.html</loc>
-    <lastmod>2023-06-06T09:29:22.648Z</lastmod>
+    <loc>https://danielescanzi.netlify.app/posts/2023-06-08-competence-vs-competitiveness/index.html</loc>
+    <lastmod>2023-06-12T22:43:48.043Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/posts.html</loc>
-    <lastmod>2023-06-06T09:29:23.580Z</lastmod>
+    <lastmod>2023-06-12T22:43:48.872Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/projects/bayesian_stat_material/bayes_intro.html</loc>
-    <lastmod>2023-06-06T09:29:24.375Z</lastmod>
+    <lastmod>2023-06-12T22:43:49.593Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/projects/bayesian_stat_material/slides_list.html</loc>
-    <lastmod>2023-06-06T09:29:25.152Z</lastmod>
+    <lastmod>2023-06-12T22:43:50.264Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/projects/daniele_useful_code_r/daniele_useful_code_r_eeg.html</loc>
-    <lastmod>2023-06-06T09:29:26.772Z</lastmod>
+    <lastmod>2023-06-12T22:43:54.191Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/projects/projects_intro.html</loc>
-    <lastmod>2023-06-06T09:29:27.573Z</lastmod>
+    <lastmod>2023-06-12T22:43:54.840Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/projects/psychopy_code/coloured_gabor_patches.html</loc>
+    <lastmod>2023-06-12T22:43:55.737Z</lastmod>
   </url>
 </urlset>
