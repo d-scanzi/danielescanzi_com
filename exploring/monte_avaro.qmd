@@ -21,25 +21,18 @@ subtitle: "A collection of photos from Monte Avaro"
 
 ## Videos
 
-![Laura (wife) decided she had enough of me](images/laura_slide.mp4){height=500}
+![Laura (wife) decided she had enough of me](images/laura_slide.mp4){height="500"}
 
-![I decided to slide too](images/daniele_slide.mov){height=500}
+![I decided to slide too](images/daniele_slide.mov){height="500"}
 
-![Bad attempt to a front flip](images/front_flips.mov){height=500}
+![Bad attempt to a front flip](images/front_flips.mov){height="500"}
 
-![Bad attempt to stay bare feet in the snow](images/bare_foot_snow.mov){height=500}
+![Bad attempt to stay bare feet in the snow](images/bare_foot_snow.mov){height="500"}
 
-![Woods with snow](images/woods_snow.mov){height=500}
+![Woods with snow](images/woods_snow.mov){height="500"}
 
-![Bob sleading first attempt](images/dani_bob_fall.mov){height=500}
+![Bob sleading first attempt](images/dani_bob_fall.mov){height="500"}
 
-![Laura's first time on a bob](images/laura_bob.mp4){height=500}
+![Laura's first time on a bob](images/laura_bob.mp4){height="500"}
 
 ![A steeper but better bob ride](images/dani_bob.mov)
-
-
-
-
-
-
-

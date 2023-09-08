@@ -33,7 +33,7 @@ Given that the weather was nice and would have remained clear until the next aft
 leaflet() %>% 
     addTiles() %>% 
     setView(lat=-38.564407, lng=175.718658, zoom = 13) %>% 
-    addMarkers(lat=-38.564407, lng=175.718658, label = "Waihāhā hut", labelOptions = labelOptions(noHide = T, direction = "bottom")) %>% 
+    addMarkers(lat=-38.564407, lng=175.718658, label = "Kakaho campsite", labelOptions = labelOptions(noHide = T, direction = "bottom")) %>% 
     addProviderTiles(provider = providers$OpenTopoMap) %>% 
     addProviderTiles(provider = providers$Stamen.Terrain)
 ```

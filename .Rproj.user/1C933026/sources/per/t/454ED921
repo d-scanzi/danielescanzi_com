@@ -1,0 +1,28 @@
+{
+    "id": "454ED921",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1694167500911.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "id": "e8c8c1f419b845179e7ce4b59420c434",
+        "name": "geo_data",
+        "title": "geo_data",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 124554051592,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1694167500911,
+    "read_only": false,
+    "read_only_alternatives": []
+}
