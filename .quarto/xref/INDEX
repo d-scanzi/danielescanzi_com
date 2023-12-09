@@ -88,5 +88,8 @@
   },
   "educating/educating_intro.qmd": {
     "educating_intro.html": "9e5925ec"
+  },
+  "projects/eeg_matlab_code/eeg_preprocessing_functions.qmd": {
+    "eeg_preprocessing_functions.html": "cc1edea5"
   }
 }
