@@ -1,0 +1,27 @@
+---
+title: Kinlock to Kawakawa track
+---
+
+-   **Location**: Kinlock - Taupo Area
+-   **Date**: 2023/12/26
+
+In the early morning of boxing day I decided to go out for a trail run on the Kinlock to Kawakawa bay track ([K2K](https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/taupo-area/things-to-do/kawakawa-bay-tracks/)). The overall run was about 20Km, 10Km in each direction, which I completed in 2 hours. The track was easy, with not too much elevation (418m overall) and some nice viewing areas (but not too many). Very quiet and relaxing - although I know that later on in the day it gets busier with mountain bikers and climbers going over to Kawakawa.
+
+```{r}
+#| echo: false
+
+library(leaflet)
+
+leaflet() %>% 
+    addTiles() %>% 
+    setView(lat =-38.66237, lng = 175.919387 , zoom = 13) %>% 
+    addMarkers(lat =-38.66237, lng = 175.919387, label = "Kinlock", labelOptions = labelOptions(noHide = T, direction = "bottom")) %>% 
+    addMarkers(lat=-38.662731, lng=175.867919, label = "Kawakawa Bay", labelOptions = labelOptions(noHide = T, direction = "bottom")) %>% 
+    addProviderTiles(provider = providers$OpenTopoMap) %>% 
+    addProviderTiles(provider = providers$Stamen.Terrain)
+```
+
+## Notes for the future
+
+Not much for this one. Trail running is great! Being immerse in the nature and not knowing exactly how much terrain you have covered (less reference points compared to running in the city) is a nice sensation.
+

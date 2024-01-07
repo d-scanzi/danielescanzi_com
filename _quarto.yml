@@ -33,9 +33,13 @@ website:
         - section: "Aotearoa"
           contents:
             - exploring/waihaha_2023_09_04.qmd
+            - exploring/kawakawa_2023_12_26.qmd
         - section: "Italy"
           contents: 
             - exploring/monte_avaro.qmd
+        - section: "Trash Running"
+          contents:
+            - exploring/trash_running.qmd
     - title: "Educating"
       style: "floating"
       contents:
