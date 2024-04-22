@@ -109,5 +109,8 @@
   },
   "educating/eeg_insights.qmd": {
     "eeg_insights.html": "ab3aea33"
+  },
+  "extra_material/eeg_insights_extra/eeg_preprocessing.ipynb": {
+    "eeg_preprocessing.html": "828dd0ac"
   }
 }
