@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -57,7 +57,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -84,86 +85,108 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">~/Daniele-Scanzi</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../projects/projects_intro.html">
+    <a class="nav-link" href="../projects/projects_intro.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../exploring/exploring_intro.html">
+    <a class="nav-link" href="../exploring/exploring_intro.html" rel="" target="">
  <span class="menu-text">Exploring</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../educating/educating_intro.html" aria-current="page">
+    <a class="nav-link" href="../educating/educating_intro.qmd" rel="" target="">
  <span class="menu-text">Educating</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts.html">
+    <a class="nav-link" href="../posts.html" rel="" target="">
  <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Students Review</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../educating/students_review.html">Students Review</a></li><li class="breadcrumb-item"><a href="../educating/students_review.html">Students Review</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../educating/educating_intro.html" class="sidebar-item-text sidebar-link">Educating</a>
-  </div>
-</li>
+ <span class="menu-text">educating/educating_intro.qmd</span>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Students Review</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Students Review</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../educating/students_review.html" class="sidebar-item-text sidebar-link active">Students Review</a>
+  <a href="../educating/students_review.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Students Review</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Bayesian Stat Group</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Bayesian Stat Group</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/bayesian_stat_material/bayes_intro.html" class="sidebar-item-text sidebar-link">Overview</a>
+  <a href="../projects/bayesian_stat_material/bayes_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/bayesian_stat_material/slides_list.html" class="sidebar-item-text sidebar-link">Slides</a>
+  <a href="../projects/bayesian_stat_material/slides_list.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">EEG</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../educating/eeg_insights.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EEG Preprocessing Insights</span></a>
   </div>
 </li>
       </ul>
@@ -171,6 +194,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -189,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Students Review</h1>
+<h1 class="title">Students Review</h1>
 </div>
 
 
@@ -209,9 +233,6 @@ ul.task-list li input[type="checkbox"] {
 <p>In the name of transparency, I have decided to post all the anonymous feedback here. I will update this page each semester, and I will address the comments and reflect on what I need to work on.</p>
 <p>As a side note, I try to encourage students to provide constructive feedback, and I try to stress that negative feedback is more than welcome. I really want to improve and work on how to be better, and negative feedback, if constructive, helps highlight things to change and work on. As such, I won’t hide any comments except if they are un-constructively negative or contain some sensitive information. I will add a note if this happens.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 
 <div class="wordcloud2 html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-291e6a32e330e6789895" style="width:100%;height:464px;"></div>
@@ -223,18 +244,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="students-marks">Students’ marks</h2>
 <p>Let’s start with a simple and fun (hopefully) section where I swap the roles with the students and they are able to grade my work.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
 <p><img src="students_review_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Happy to see that there is nothing in <em>Below Average</em> and that the way I am currently running the tutorials is appreciated.</p>
 <p>In terms of marks, the grades below are scaled by their relative proportion. The larger the letter, the higher the number of students that selected that grade. Again, I’m happy to see the <em>A+</em> and <em>A</em> being large!</p>
-<div class="cell">
-
-</div>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="students_review_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
@@ -263,137 +278,137 @@ ul.task-list li input[type="checkbox"] {
 <p>I agree on this point. One of the aspects I need to work more on is structure (more on this in the next session). I do not want to have everything predefined, as this is counterproductive, but I will try to define at the beginning of the tutorial the key areas I will discuss.</p>
 <div class="cell">
 <div class="cell-output-display">
-
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; "><table class=" lightable-material lightable-hover" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> Feedback </th>
-  </tr>
- </thead>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table class="lightable-material lightable-hover table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Feedback</th>
+</tr>
+</thead>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Interactiveness, enthusiasm and motivation </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I really loved your passion and the time you took to check everybody understood. Also appreciated when you would draw diagrams to help us understand when we were all struggling to understand. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I enjoyed the activities we did!! It was fun especially with how the content was pretty full on but the fact we got to discuss often with our peers was a good aspect for me. I also liked how you went through the content first explaining everything we similarly learnt in lectures before we started because hearing it from the way you talked about it helped me understand lecture content a bit easier. And the white board examples and the pictures helped immensely!!!! It made things so much easier to grasp so please continue that because reading of PowerPoint slides for me personally doesn’t feel engaging </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Engaged with smaller group discussions by walking around the room 
-Answered questions directly and was ready to do so in the middle of a presentation </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Tutorials felt well prepared and always were well delivered, the content was explained clearly and sometimes having clarification of lecture material was super helpful. Your delivery was engaging and even content I'm not super into wasn't boring so thank you! You seem to be pretty into the topics that we covered which really helps. The feedback on the essay was pretty insightful too. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Trying to engage the class rather than lecturing, despite a lack of input form us 😆 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> All content was explained clearly, and questions from the class were answered swiftly and very well. The way we walked through different programmes was extremely helpful for understanding the way they work and how data is arranged and understood. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> You were fun and engaging, incredibly knowledgeable about the topics you were teaching, spent time with us one-on-one or in pairs when able and provided individual feedback + guidance </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Constructive feedback allowing us to critically think </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Always trying to make things fun and using interactive ways of learning, checking that everyone is understanding was really nice </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I find it really helpful that you go in depth into the concepts as it helps me understand more. i also really appreciate in the tips you provide in our academic writing etc finding sources, i find them really helpful :) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I appreciated the quality of the content and how it was useful and complementary to the lectures </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Everything is explained very well, you’re very patient with answering questions no matter how many are asked or if you get interrupted, you know the content well and relate it to us in a very simple and good way as well, you give us a very nice breakdown of how to write things and what to include in assignments (for the TBI essay) and in general you make it a very nice environment to be in and your chill/relaxed and funny vibe makes the tutorials far more engaging </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Asked us questions that helped go to actively revise. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Support! You were very supportive and accurately explained what was required to do well in this class, and explained what we did not need to know as extensively - which was much appreciated as often times labs can be seen as just an overload of information. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> i liked how you explained things in a different way to the lecturers which often made more sense to me. or having the content presented in a different way deepened my understanding of it. i liked how you took the time to explain something fully to me again if i still didn’t understand it </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Giving supports to every student, really engaging with the class </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> tutorials are fun and friendly environments </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Literally so fun for 9am on a Friday! You are just so engaging and knowledgeable and really get us thinking. Thanks for being such a legend! I really enjoy these labs </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Always try to make tutorials fun, friendly demeanour in general, and genuinely trying to help us, thank you! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Always have interesting teaching way </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Good at explaining thoroughly and gives a real opportunity for students to ask questions. Also answers questions as best as possible. Takes time to check in on each student/group individually and welcoming to ask questions to. Seems like you genuinely want to help your students understand everything clearly and do well. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> You have always been very transparent and supportive of us. You helped us with everything you could and always gave us the right advice, pushing us to do so much more. The feedback on our assignments has been very thorough which also personally has helped me to incorporate into assignments from my other courses. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Support was great! feedback on the assignments was super helpful </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Really encouraging and great with positive feedback. I really liked the feedback I received on my assignments throughout the course as it guided me as to how to improve in my work. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Explained alot of concepts and answers thoroughly and appreciated that he took the time to go through everything. Feedback felt subjective and catered to our learning </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I felt like the tutorials were quite good, maybe trying to put more organisation with our meetings and not just us asking questions and more information being given would be good. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> The feedback you gave on my blog post was super helpful! I didn't realise how much blog was lacking something big and your feedback helped me see it but you also provided specific tips to integrate so I didn't feel lost knowing I had alot of work to improve on :) You were also super on top of replying in teams and being there for support so that was something else that made you such an awesome tutor. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I appreciate how friendly and easy to approach you were. Unlike some other tutors, you really made it easy for us to ask questions - esp questions that we found hard to ask to other lecturers. Assignment feedbacks were extremely detailed and helpful and also very fair I personally think. I also like how chill you were - as long as we followed the rubric and did everything, you were very fair with your marking - literally made capstone life extremely enjoyable and rewarding to have a tutor who understood what you were doing! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Friendly manner, always willing to help </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Feedback on assignments are good, you take the time to listen and help and make sure we understand </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Very helpful, compassionate, supportive and understanding, explained really well </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Explaining things throughly, questioning us and making us work things through </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Good feedback &amp; ways of trying to improve our learning. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> You were very helpful and understanding of our places in knowledge. Your feedback was helpful in allowing for a better understanding. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> The content covered was always relevant and helpful. Trying to engage the class </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> You were always super nice and friendly and you always made me feel super comfortable coming to class. I was also never nervous to ask you questions about assignments cause you were always very informative and good with helping. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Appreciated how patient you were, especially re-explaining something over and over again so our class understood. Your feedback and also going over and beyond. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> i appreciated fast reply’s on email, and also giving feedback on assignments and work. friendly work environment </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> You did a great job in tutorials giving people opportunities to ask for help of they needed it and checking to make sure we were on the right track. Also you kept it engaging by relating the various topics and ideas to your own interest and the wider ideas around the topic, encouraging broader thinking about it. </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Interactiveness, enthusiasm and motivation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I really loved your passion and the time you took to check everybody understood. Also appreciated when you would draw diagrams to help us understand when we were all struggling to understand.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I enjoyed the activities we did!! It was fun especially with how the content was pretty full on but the fact we got to discuss often with our peers was a good aspect for me. I also liked how you went through the content first explaining everything we similarly learnt in lectures before we started because hearing it from the way you talked about it helped me understand lecture content a bit easier. And the white board examples and the pictures helped immensely!!!! It made things so much easier to grasp so please continue that because reading of PowerPoint slides for me personally doesn’t feel engaging</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Engaged with smaller group discussions by walking around the room Answered questions directly and was ready to do so in the middle of a presentation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tutorials felt well prepared and always were well delivered, the content was explained clearly and sometimes having clarification of lecture material was super helpful. Your delivery was engaging and even content I'm not super into wasn't boring so thank you! You seem to be pretty into the topics that we covered which really helps. The feedback on the essay was pretty insightful too.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Trying to engage the class rather than lecturing, despite a lack of input form us 😆</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">All content was explained clearly, and questions from the class were answered swiftly and very well. The way we walked through different programmes was extremely helpful for understanding the way they work and how data is arranged and understood.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">You were fun and engaging, incredibly knowledgeable about the topics you were teaching, spent time with us one-on-one or in pairs when able and provided individual feedback + guidance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Constructive feedback allowing us to critically think</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Always trying to make things fun and using interactive ways of learning, checking that everyone is understanding was really nice</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I find it really helpful that you go in depth into the concepts as it helps me understand more. i also really appreciate in the tips you provide in our academic writing etc finding sources, i find them really helpful :)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I appreciated the quality of the content and how it was useful and complementary to the lectures</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Everything is explained very well, you’re very patient with answering questions no matter how many are asked or if you get interrupted, you know the content well and relate it to us in a very simple and good way as well, you give us a very nice breakdown of how to write things and what to include in assignments (for the TBI essay) and in general you make it a very nice environment to be in and your chill/relaxed and funny vibe makes the tutorials far more engaging</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Asked us questions that helped go to actively revise.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Support! You were very supportive and accurately explained what was required to do well in this class, and explained what we did not need to know as extensively - which was much appreciated as often times labs can be seen as just an overload of information.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">i liked how you explained things in a different way to the lecturers which often made more sense to me. or having the content presented in a different way deepened my understanding of it. i liked how you took the time to explain something fully to me again if i still didn’t understand it</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Giving supports to every student, really engaging with the class</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tutorials are fun and friendly environments</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Literally so fun for 9am on a Friday! You are just so engaging and knowledgeable and really get us thinking. Thanks for being such a legend! I really enjoy these labs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Always try to make tutorials fun, friendly demeanour in general, and genuinely trying to help us, thank you!</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Always have interesting teaching way</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Good at explaining thoroughly and gives a real opportunity for students to ask questions. Also answers questions as best as possible. Takes time to check in on each student/group individually and welcoming to ask questions to. Seems like you genuinely want to help your students understand everything clearly and do well.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">You have always been very transparent and supportive of us. You helped us with everything you could and always gave us the right advice, pushing us to do so much more. The feedback on our assignments has been very thorough which also personally has helped me to incorporate into assignments from my other courses.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Support was great! feedback on the assignments was super helpful</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Really encouraging and great with positive feedback. I really liked the feedback I received on my assignments throughout the course as it guided me as to how to improve in my work.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Explained alot of concepts and answers thoroughly and appreciated that he took the time to go through everything. Feedback felt subjective and catered to our learning</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I felt like the tutorials were quite good, maybe trying to put more organisation with our meetings and not just us asking questions and more information being given would be good.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The feedback you gave on my blog post was super helpful! I didn't realise how much blog was lacking something big and your feedback helped me see it but you also provided specific tips to integrate so I didn't feel lost knowing I had alot of work to improve on :) You were also super on top of replying in teams and being there for support so that was something else that made you such an awesome tutor.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I appreciate how friendly and easy to approach you were. Unlike some other tutors, you really made it easy for us to ask questions - esp questions that we found hard to ask to other lecturers. Assignment feedbacks were extremely detailed and helpful and also very fair I personally think. I also like how chill you were - as long as we followed the rubric and did everything, you were very fair with your marking - literally made capstone life extremely enjoyable and rewarding to have a tutor who understood what you were doing!</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Friendly manner, always willing to help</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Feedback on assignments are good, you take the time to listen and help and make sure we understand</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Very helpful, compassionate, supportive and understanding, explained really well</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Explaining things throughly, questioning us and making us work things through</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Good feedback &amp; ways of trying to improve our learning.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">You were very helpful and understanding of our places in knowledge. Your feedback was helpful in allowing for a better understanding.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The content covered was always relevant and helpful. Trying to engage the class</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">You were always super nice and friendly and you always made me feel super comfortable coming to class. I was also never nervous to ask you questions about assignments cause you were always very informative and good with helping.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Appreciated how patient you were, especially re-explaining something over and over again so our class understood. Your feedback and also going over and beyond.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">i appreciated fast reply’s on email, and also giving feedback on assignments and work. friendly work environment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">You did a great job in tutorials giving people opportunities to ask for help of they needed it and checking to make sure we were on the right track. Also you kept it engaging by relating the various topics and ideas to your own interest and the wider ideas around the topic, encouraging broader thinking about it.</td>
+</tr>
 </tbody>
-</table></div>
+</table>
+</div>
 
 </div>
 </div>
@@ -414,112 +429,113 @@ Answered questions directly and was ready to do so in the middle of a presentati
 <p>Given the multiple comments appreciating the lengthy feedback on the essays, I will not plan to change this. Assignments and exams are not just a test but an opportunity to improve and gain skills. By providing detailed feedback, students are able to improve their future work. I agree that I can be strict with my marking. This is partly caused by my study background and the way I have been assessed. Partly because I try to mark focusing hardly on the reasoning. That is, I don’t see just repeating the content from a book or lectures as being enough for an A+. The reasoning behind an answer is important. Nonetheless, in the class I teach, us tutors try to match our criteria, so if I am being too harsh, other tutors and professors will call me out on this before the marks are finalized.</p>
 <div class="cell">
 <div class="cell-output-display">
-
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; "><table class=" lightable-material lightable-hover" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> answers </th>
-  </tr>
- </thead>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table class="lightable-material lightable-hover table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">answers</th>
+</tr>
+</thead>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Nothing really </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Only suggestion I have is to speak slower. Your excitement and English are amazing, but when you speak really fast with excitement, it made it difficult to understand and keep up sometimes. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> This isn't really a you thing but it was better communication with the lecturers (not really your fault) as it's kind of disheartening when tutors don't know whata's going on with what lecturers are doing for example when lab quizzes results are released or even whats going on with exams. I also wish we got to discuss with more of our peers around the room, not just the people we sat with but I guess that’s kind of hard with the layout of the room </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Sometimes skipped over points too quick. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Sometimes the discussion time in tutorials felt too long and often we'd finish the task and end up going off task. Maybe less small group discussion and then a longer period for class discussion would have been more to my personal preference, but its not a major issue cause there was normally plenty of time anyway. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Occasionally you start to rush when you get excited, which is fun to see but it can lead to us missing certain points sometimes </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Honestly, thought you were amazing. Maybe you could just slow down sometimes with your explanations because it can be a bit hard to keep up with </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Genuinely cannot think of anything sorry </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I am happy with the way the tutorials are going :) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I don't believe there is anything you could do better :) keep up the great work! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Honestly nothing, the way you do things is amazing </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Summarise the lab at the end </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I think maybe the first few labs had a LOT of information to be taught and not so much time for questions to be asked. This isn’t so much a tutor specific issue, rather it is a course coordination issue of how much is taught in those labs </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> occasionally (not often) i couldn’t understand what you were saying when you spoke fast </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> some tutorials cover ground that has already been covered in previous years, such as essay writing basics, though this is likely more of an issue with the general course coordination </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> More magic please! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Keep doing what you're doing :) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Maybe speaking a little bit slower is better </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> More of feedback for tutorials in general rather than the tutor but Maybe, especially in the first lesson, have more focus on having students introduce themselves in the class and have opportunities to work together and discuss with each other so that students can build relationships to each other and to tutor. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I honestly cannot think of anything because I believe you have been amazing and very supportive with the work that I have done. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I honestly cannot think of anything because I believe you have been amazing and very supportive with the work that I have done. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> communication could've been better, at times was difficult to get our points across as our research differed greatly from yours, which is completely okay but having a tutor who knows the topic and understands the specific research would have made it a wee bit easier for you and us. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Would appreciate more concise marking, and felt markinf scores were abit harsh sometimes compared to other students or the feedback received </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Maybe provide more tips on what we should be careful of when doing each assignment - like providing common places where student often lose marks or mess up </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Nothing much - everything was all good! Don't really have much feedback </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> deeper explanation of that weeks lecture content </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I think you are good </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> More magic and pizza </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Nothing I love this tutor </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Don’t overestimate students understanding of topics </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I think maybe just more in depth feedback and being super critical, even though people might not like it it’s actually very helpful. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Found the we had to rush some tutorials to fit within the 2hr time. Could try changing what info to include / exclude to fit within the 2hrs and no information is rushed. Could spend a little time going over lectures etc. </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Nothing really</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Only suggestion I have is to speak slower. Your excitement and English are amazing, but when you speak really fast with excitement, it made it difficult to understand and keep up sometimes.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">This isn't really a you thing but it was better communication with the lecturers (not really your fault) as it's kind of disheartening when tutors don't know whata's going on with what lecturers are doing for example when lab quizzes results are released or even whats going on with exams. I also wish we got to discuss with more of our peers around the room, not just the people we sat with but I guess that’s kind of hard with the layout of the room</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sometimes skipped over points too quick.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sometimes the discussion time in tutorials felt too long and often we'd finish the task and end up going off task. Maybe less small group discussion and then a longer period for class discussion would have been more to my personal preference, but its not a major issue cause there was normally plenty of time anyway.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Occasionally you start to rush when you get excited, which is fun to see but it can lead to us missing certain points sometimes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Honestly, thought you were amazing. Maybe you could just slow down sometimes with your explanations because it can be a bit hard to keep up with</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Genuinely cannot think of anything sorry</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I am happy with the way the tutorials are going :)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I don't believe there is anything you could do better :) keep up the great work!</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Honestly nothing, the way you do things is amazing</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Summarise the lab at the end</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I think maybe the first few labs had a LOT of information to be taught and not so much time for questions to be asked. This isn’t so much a tutor specific issue, rather it is a course coordination issue of how much is taught in those labs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">occasionally (not often) i couldn’t understand what you were saying when you spoke fast</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">some tutorials cover ground that has already been covered in previous years, such as essay writing basics, though this is likely more of an issue with the general course coordination</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">More magic please!</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Keep doing what you're doing :)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maybe speaking a little bit slower is better</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">More of feedback for tutorials in general rather than the tutor but Maybe, especially in the first lesson, have more focus on having students introduce themselves in the class and have opportunities to work together and discuss with each other so that students can build relationships to each other and to tutor.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I honestly cannot think of anything because I believe you have been amazing and very supportive with the work that I have done.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I honestly cannot think of anything because I believe you have been amazing and very supportive with the work that I have done.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">communication could've been better, at times was difficult to get our points across as our research differed greatly from yours, which is completely okay but having a tutor who knows the topic and understands the specific research would have made it a wee bit easier for you and us.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Would appreciate more concise marking, and felt markinf scores were abit harsh sometimes compared to other students or the feedback received</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maybe provide more tips on what we should be careful of when doing each assignment - like providing common places where student often lose marks or mess up</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nothing much - everything was all good! Don't really have much feedback</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">deeper explanation of that weeks lecture content</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I think you are good</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">More magic and pizza</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nothing I love this tutor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Don’t overestimate students understanding of topics</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I think maybe just more in depth feedback and being super critical, even though people might not like it it’s actually very helpful.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Found the we had to rush some tutorials to fit within the 2hr time. Could try changing what info to include / exclude to fit within the 2hrs and no information is rushed. Could spend a little time going over lectures etc.</td>
+</tr>
 </tbody>
-</table></div>
+</table>
+</div>
 
 </div>
 </div>
@@ -529,85 +545,86 @@ Answered questions directly and was ready to do so in the middle of a presentati
 <p>As my survey is meant to be quick, I leave the opportunity to express other ideas freely.</p>
 <div class="cell">
 <div class="cell-output-display">
-
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; "><table class=" lightable-material lightable-hover" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> answers </th>
-  </tr>
- </thead>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table class="lightable-material lightable-hover table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">answers</th>
+</tr>
+</thead>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Great job! Thanks for being a great tutor! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Thanks so much for your help and enthusiasm! I found Psych 305 to be a really difficult class, but having you as a tutor helped me so much with the work content because your excitement made me get more excited about it, which helped me engage and learn better! I really loved having you teach us! All the best. :) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Thanks for a great semester!! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Thank you for teaching us over the past semester, and good luck with your PhD! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Great job. I personally hate tutorials, and you made them fun and engaging and made me look forward to coming :) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Thank you for a lovely lab! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I think you are a great tutor (: </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> thank you for all your hard work :) </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Thank you! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> I'm not actually in your normal stream but joined it once when I couldn’t attend my normal one and I enjoyed your tutorial so much that I made it my regular stream and have been coming along ever since </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> LOVE YOU DANIELE!!! You are an awesome tutor </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> you never gave us the pizza making class :( </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Please keep tutoring! You're literally my fav! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Thank you for being such a lovely tutor this semester, I wish you luck on all your future eneavours. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> No </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Great mustache! And you did a great job giving students opportunity to ask questions individually (rather than to whole class) so felt more comfortable and open. Thanks! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Daniele is an amazing tutor and an amazing person. With great professionalism that can be seen on our assignments feedback and advice, he is super friendly and ensures that you are not being negatively criticised. He is highly supportive and always pushes you to perform to the best of your ability. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Daniele is an amazing tutor, who is thoughtful and empathetic. He is a great help to those who are stuck and need a direction. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Daniele was my tutor for my year 3 capstone course of my degree. He was an amazing communicator who was ways able to convey feedback in an depth manner - because of this I was motivated improve my work rather than seeing it as a daunting task. He also always came to meetings with a positive attitude and willingness to help! </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Daniele is an extremely friendly tutor. Very thoughtful and always eager to help his students. His tutorial sessions were always helpful and his assignment feedbacks were very detailed and accurate. Would love to have him as my tutor for other classes too. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> You are a great tutor. Continue to do the awesome work of teaching your students. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Daniele is very calm in nature and provides a positive environment that allows for learning and is very entertaining when adding his magic into his tutorials. </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Daniele was a great tutor to have as he was always so nice to everyone and helpful when questions were asked. I learnt a lot in his class and it made me enjoy going to my tutorial because he was a good teacher. </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Great job! Thanks for being a great tutor!</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Thanks so much for your help and enthusiasm! I found Psych 305 to be a really difficult class, but having you as a tutor helped me so much with the work content because your excitement made me get more excited about it, which helped me engage and learn better! I really loved having you teach us! All the best. :)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Thanks for a great semester!!</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Thank you for teaching us over the past semester, and good luck with your PhD!</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Great job. I personally hate tutorials, and you made them fun and engaging and made me look forward to coming :)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Thank you for a lovely lab!</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I think you are a great tutor (:</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">thank you for all your hard work :)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Thank you!</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I'm not actually in your normal stream but joined it once when I couldn’t attend my normal one and I enjoyed your tutorial so much that I made it my regular stream and have been coming along ever since</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LOVE YOU DANIELE!!! You are an awesome tutor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">you never gave us the pizza making class :(</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Please keep tutoring! You're literally my fav!</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Thank you for being such a lovely tutor this semester, I wish you luck on all your future eneavours.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Great mustache! And you did a great job giving students opportunity to ask questions individually (rather than to whole class) so felt more comfortable and open. Thanks!</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Daniele is an amazing tutor and an amazing person. With great professionalism that can be seen on our assignments feedback and advice, he is super friendly and ensures that you are not being negatively criticised. He is highly supportive and always pushes you to perform to the best of your ability.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Daniele is an amazing tutor, who is thoughtful and empathetic. He is a great help to those who are stuck and need a direction.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Daniele was my tutor for my year 3 capstone course of my degree. He was an amazing communicator who was ways able to convey feedback in an depth manner - because of this I was motivated improve my work rather than seeing it as a daunting task. He also always came to meetings with a positive attitude and willingness to help!</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Daniele is an extremely friendly tutor. Very thoughtful and always eager to help his students. His tutorial sessions were always helpful and his assignment feedbacks were very detailed and accurate. Would love to have him as my tutor for other classes too.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">You are a great tutor. Continue to do the awesome work of teaching your students.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Daniele is very calm in nature and provides a positive environment that allows for learning and is very entertaining when adding his magic into his tutorials.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Daniele was a great tutor to have as he was always so nice to everyone and helpful when questions were asked. I learnt a lot in his class and it made me enjoy going to my tutorial because he was a good teacher.</td>
+</tr>
 </tbody>
-</table></div>
+</table>
+</div>
 
 </div>
 </div>
@@ -758,9 +775,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -825,6 +856,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

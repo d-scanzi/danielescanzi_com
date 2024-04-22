@@ -97,5 +97,17 @@
   },
   "exploring/kawakawa_2023_12_26.qmd": {
     "kawakawa_2023_12_26.html": "2f780f8e"
+  },
+  "educating/eeg_preprocessing.ipynb": {
+    "eeg_preprocessing.html": "8e80ad1a"
+  },
+  "educating/preprocessing_insights.qmd": {
+    "preprocessing_insights.html": "09f39caf"
+  },
+  "educating/test_eeg.qmd": {
+    "test_eeg.html": "fdedb8ec"
+  },
+  "educating/eeg_insights.qmd": {
+    "eeg_insights.html": "ab3aea33"
   }
 }
