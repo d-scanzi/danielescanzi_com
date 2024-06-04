@@ -2,82 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://danielescanzi.netlify.app/projects/psychopy_code/coloured_gabor_patches.html</loc>
-    <lastmod>2024-04-22T20:16:02.304Z</lastmod>
+    <lastmod>2024-06-04T21:37:48.754Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/projects/eeg_matlab_code/eeg_preprocessing_functions.html</loc>
-    <lastmod>2024-04-22T20:16:01.656Z</lastmod>
+    <lastmod>2024-06-04T21:37:48.109Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/projects/bayesian_stat_material/bayes_intro.html</loc>
-    <lastmod>2024-04-22T20:16:00.936Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/posts/2023-06-08-competence-vs-competitiveness/index.html</loc>
-    <lastmod>2024-04-22T20:16:00.177Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/index.html</loc>
-    <lastmod>2024-04-22T20:15:59.055Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/exploring/waihaha_2023_09_04.html</loc>
-    <lastmod>2024-04-22T20:15:58.214Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/exploring/monte_avaro.html</loc>
-    <lastmod>2024-04-22T20:15:57.452Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/exploring/exploring_intro.html</loc>
-    <lastmod>2024-04-22T20:15:56.763Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/educating/eeg_preprocessing.html</loc>
-    <lastmod>2024-04-22T20:15:55.330Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/educating/educating_intro.html</loc>
-    <lastmod>2024-04-22T20:15:47.124Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/about.html</loc>
-    <lastmod>2024-04-22T20:15:46.726Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/educating/eeg_insights.html</loc>
-    <lastmod>2024-04-22T20:15:54.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/educating/students_review.html</loc>
-    <lastmod>2024-04-22T20:15:56.283Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/exploring/kawakawa_2023_12_26.html</loc>
-    <lastmod>2024-04-22T20:15:57.144Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/exploring/trash_running.html</loc>
-    <lastmod>2024-04-22T20:15:57.795Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/extra_material/eeg_insights_extra/eeg_preprocessing.html</loc>
-    <lastmod>2024-04-22T20:15:58.746Z</lastmod>
-  </url>
-  <url>
-    <loc>https://danielescanzi.netlify.app/posts/2022-10-03-k-means-clustering/index.html</loc>
-    <lastmod>2024-04-22T20:15:59.840Z</lastmod>
+    <lastmod>2024-06-04T21:37:47.388Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/posts.html</loc>
-    <lastmod>2024-04-22T20:16:00.633Z</lastmod>
+    <lastmod>2024-06-04T21:37:46.755Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/posts/2022-10-03-k-means-clustering/index.html</loc>
+    <lastmod>2024-06-04T21:37:45.956Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/extra_material/eeg_insights_extra/eeg_preprocessing.html</loc>
+    <lastmod>2024-06-04T21:37:44.842Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/exploring/trash_running.html</loc>
+    <lastmod>2024-06-04T21:37:43.910Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/exploring/kawakawa_2023_12_26.html</loc>
+    <lastmod>2024-06-04T21:37:43.255Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/educating/students_review.html</loc>
+    <lastmod>2024-06-04T21:37:42.392Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/educating/eeg_insights.html</loc>
+    <lastmod>2024-06-04T21:37:40.940Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/about.html</loc>
+    <lastmod>2024-06-04T21:37:38.828Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/educating/educating_intro.html</loc>
+    <lastmod>2024-06-04T21:37:39.216Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/educating/eeg_preprocessing.html</loc>
+    <lastmod>2024-06-04T21:37:41.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/exploring/exploring_intro.html</loc>
+    <lastmod>2024-06-04T21:37:42.866Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/exploring/monte_avaro.html</loc>
+    <lastmod>2024-06-04T21:37:43.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/exploring/waihaha_2023_09_04.html</loc>
+    <lastmod>2024-06-04T21:37:44.315Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/index.html</loc>
+    <lastmod>2024-06-04T21:37:45.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/posts/2023-06-08-competence-vs-competitiveness/index.html</loc>
+    <lastmod>2024-06-04T21:37:46.294Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielescanzi.netlify.app/projects/a_paper_a_day/papers_summaries.html</loc>
+    <lastmod>2024-06-04T21:37:47.077Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/projects/bayesian_stat_material/slides_list.html</loc>
-    <lastmod>2024-04-22T20:16:01.223Z</lastmod>
+    <lastmod>2024-06-04T21:37:47.677Z</lastmod>
   </url>
   <url>
     <loc>https://danielescanzi.netlify.app/projects/projects_intro.html</loc>
-    <lastmod>2024-04-22T20:16:01.955Z</lastmod>
+    <lastmod>2024-06-04T21:37:48.386Z</lastmod>
   </url>
 </urlset>
