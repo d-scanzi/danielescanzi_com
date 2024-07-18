@@ -1,0 +1,17 @@
+---
+title: 'ESignal Detection Theory'
+format:
+  html: default
+  revealjs:
+    output-file: page-reveal.html
+---
+
+## Is Wally there?
+
+![](img/where_is_wally_intro.jpg) 
+
+Here is a fun experiment. I show you a picture from the puzzle *Where is Wally?* and you need to tell me, as quickly as possible, whether Wally is in there or not. That's correct, I don't want to know where Wally is - that's the standard game - I want to know if he's present in the picture. You can give me only two possible answers "YES" or "NO" and your time is limited.
+
+Click on the [link here](https://rpubs.com/Scanzi_D/iswallyhere) and write down your answer for each image (or just answer in the moment, there are no solutions for this small example).
+
+You should that found that some trials where straightforward - most likely you found Wally immediately. Some trials were difficult (like the image above) - you were completely lost. Some other trials were tricky - you think you answered correctly, but you are unsure. 

@@ -4,6 +4,6 @@ title: "Slides"
 
 Here you can find the link to the slides openly available on RPubs.
 
-- [Introduction to Bayesian Stat](https://rpubs.com/Scanzi_D/bayes_group_00)
-- [Bayes Theorem](https://rpubs.com/Scanzi_D/bayes_group_01)
-- [Bayesian Engines](https://rpubs.com/Scanzi_D/bayes_group_02)
+-   [Introduction to Bayesian Stat](https://rpubs.com/Scanzi_D/bayes_group_00)
+-   [Bayes Theorem](https://rpubs.com/Scanzi_D/bayes_group_01)
+-   [Bayesian Engines](https://rpubs.com/Scanzi_D/bayes_group_02)

@@ -18,9 +18,9 @@ website:
       style: "floating"
       contents:
         - projects/projects_intro.qmd
-        - section: "A Paper a day"
-          contents: 
-            - projects/a_paper_a_day/papers_summaries.qmd
+        #- section: "A Paper a day"
+         # contents: 
+          #  - projects/a_paper_a_day/papers_summaries.qmd
         - section: "Experiments"
           contents:
             - projects/psychopy_code/coloured_gabor_patches.qmd
@@ -40,9 +40,9 @@ website:
         - section: "Italy"
           contents: 
             - exploring/monte_avaro.qmd
-        - section: "Trash Running"
-          contents:
-            - exploring/trash_running.qmd
+        #- section: "Trash Running"
+        #  contents:
+        #    - exploring/trash_running.qmd
     - title: "Educating"
       style: "floating"
       contents:
@@ -54,7 +54,7 @@ website:
           contents: 
             - projects/bayesian_stat_material/bayes_intro.qmd
             - projects/bayesian_stat_material/slides_list.qmd
-        - section: "EEG"
+        - section: "Lab Meetings"
           contents:
             - educating/eeg_insights.qmd
     

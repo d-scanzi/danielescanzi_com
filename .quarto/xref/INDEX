@@ -115,5 +115,11 @@
   },
   "projects/a_paper_a_day/papers_summaries.qmd": {
     "papers_summaries.html": "1d1cd35c"
+  },
+  "educating/signal_detection_theory.qmd": {
+    "signal_detection_theory.html": "8e501118"
+  },
+  "educating/signal_Detection_files/is_waldo_there_slides.qmd": {
+    "is_waldo_there_slides.html": "4ca133e5"
   }
 }

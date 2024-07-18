@@ -340,7 +340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>ax.plot(times, np.append(composite_signal[<span class="dv">0</span>:<span class="bu">int</span>(<span class="bu">len</span>(composite_signal)<span class="op">/</span><span class="dv">2</span>)], filtered_half_signal), <span class="st">"r"</span>)</span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>ax.vlines(times[<span class="bu">int</span>(<span class="bu">len</span>(times)<span class="op">/</span><span class="dv">2</span>)], <span class="bu">min</span>(composite_signal), <span class="bu">max</span>(composite_signal), colors<span class="op">=</span><span class="st">"k"</span>, linestyles<span class="op">=</span><span class="st">"dashed"</span>, linewidth<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>&lt;matplotlib.collections.LineCollection at 0x29a708ccf20&gt;</code></pre>
+<pre><code>&lt;matplotlib.collections.LineCollection at 0x7fa08f7b77d0&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="eeg_insights_files/figure-html/cell-4-output-2.png" width="805" height="411"></p>
@@ -395,7 +395,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">1</span>].set_xlabel(<span class="st">"Time (s)"</span>)</span>
 <span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">1</span>].set_ylabel(<span class="st">"Amplitude (AU)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="eeg_insights_files/figure-html/cell-6-output-1.png" width="977" height="484"></p>
+<p><img src="eeg_insights_files/figure-html/cell-6-output-1.png" width="978" height="482"></p>
 </div>
 </div>
 <p>To understand filters and the information you might find online or published in some papers, we need to define a few terms. Note that these terms should be reported in a publication to ensure the correct replicability of your analyses - though not many people do this.</p>

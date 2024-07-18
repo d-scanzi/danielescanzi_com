@@ -1,0 +1,32 @@
+---
+title: "Is Wally There?"
+format: 
+  revealjs: 
+    auto-slide: 5000
+    loop: true
+---
+
+## Task
+
+Each image will be presented for 5 seconds. Write down whether you Wally is in the image or not
+
+## Trial 1
+![](wally_easy.jpg)
+
+## Trial 2
+![](where_is_wally_no_1.jpg)
+
+## Trial 3
+![](where_is_wally_easy_2.jpeg)
+
+## Trial 4
+![](where_is_wally_hard_1.jpg)
+
+## Trial 5
+![](where_is_wally_no_2.jpg)
+
+## Trial 6
+![](where_is_wally_no_3.jpg)
+
+## Trial 7
+![](where_is_wally_medium.png)
