@@ -1,0 +1,12 @@
+name: sdt_updated
+title: sdt_updated
+username: d-scanzi
+account: d-scanzi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12342552
+bundleId: 8886873
+url: https://d-scanzi.shinyapps.io/sdt_updated/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
