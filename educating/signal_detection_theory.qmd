@@ -161,10 +161,10 @@ reason for this is that they are both computed on the number of trials
 that contained Wally. The same goes for the false alarm and the correct
 rejection rates.
 
-|               | Wally is there                                 | Wally is not there                                                               |     |     |
-|---------------|---------------|---------------|---------------|---------------|
-| You say "yes" | $\frac{\text{hit}}{\text{hit} + \text{miss}}$  | $\frac{\text{false alarm}}{\text{false alarm} + \text{correct rejection}}$       |     |     |
-| You say "no"  | $\frac{\text{miss}}{\text{hit} + \text{miss}}$ | $\frac{\text{correct rejection}}{\text{false alarm} + \text{correct rejection}}$ |     |     |
+|               | Wally is there | Wally is not there |
+|---------------|---------------|---------------|
+| You say "yes" | $\frac{\text{hit}}{\text{hit} + \text{miss}}$  | $\frac{\text{false alarm}}{\text{false alarm} + \text{correct rejection}}$       |
+| You say "no"  | $\frac{\text{miss}}{\text{hit} + \text{miss}}$ | $\frac{\text{correct rejection}}{\text{false alarm} + \text{correct rejection}}$ |
 
 Because hits and false alarms include information regarding all the
 possible types of answers, we can just use those to compute, where were
@@ -179,8 +179,8 @@ false alarm rate. This means that we should expect our sensitivity
 measure to increase if (1) the hit rate increases, (2) the false alarm
 rate decreases, or (3) both. A measure with these characteristics can be
 obtained by subtracting the false alarm rate from the hit rate (for 1AFC
-tasks, an adjustment of \$\\frac{\\sqrt{2}}{2}\$ needed for 2AFC tasks),
-but the concept is similar).
+tasks, an adjustment of $\frac{\sqrt{2}}{2}$ needed for 2AFC tasks), but
+the concept is similar).
 
 Think about this. If your hit rate is high and your false alarm rate is
 low, the result of the subtraction would be high. Vice versa, if your
@@ -413,17 +413,50 @@ Others might have a bias for YES.
 
 Sweet, the threshold for enough evidence is determined by (a) the
 stimulus itself and (b) the personal bias. The stimulus is a mix of
-noise and signal so that the closer the noise is to the signal (e.g. all the red and stripes in the picture) and the weaker the signal itself (imagine a teeny-tiny Wally), the more difficult it is to separate the two. We are now at the first point on the list. Obviously, noise and signal are two very broad terms, but this is good for us because we can do what every good scientist does when dealing with something vague: create a normal distribution. The simplest - but powerful - SDT model to explain performance in a 1AFC task is a Gaussian Model, where the probability of classifying something as noise (NO) and the probability of classifying something a signal (YES) are described by two Gaussian.
+noise and signal so that the closer the noise is to the signal (e.g. all
+the red and stripes in the picture) and the weaker the signal itself
+(imagine a teeny-tiny Wally), the more difficult it is to separate the
+two. We are now at the first point on the list. Obviously, noise and
+signal are two very broad terms, but this is good for us because we can
+do what every good scientist does when dealing with something vague:
+create a normal distribution. The simplest - but powerful - SDT model to
+explain performance in a 1AFC task is a Gaussian Model, where the
+probability of classifying something as noise (NO) and the probability
+of classifying something a signal (YES) are described by two Gaussian.
 
 ```{=html}
 <iframe width="100%" height="1000" src="https://d-scanzi.shinyapps.io/sdt_updated/" title="SDT"></iframe>
 ```
 [Open app in new page](https://d-scanzi.shinyapps.io/sdt_updated/)
 
-Play around with this app. The two curves represent noise and signal. These curves, specifically, tell you the probability of something being noise (or signal) given a specific value of one dimension of your stimulus (x-axis: here can be anything, image contrast, familiarity, etc...). The simplest model implies that the two curves have equal variance, though this assumption can be relaxed. Try to modify the noise spread or the signal spread. 
+Play around with this app. The two curves represent noise and signal.
+These curves, specifically, tell you the probability of something being
+noise (or signal) given a specific value of one dimension of your
+stimulus (x-axis: here can be anything, image contrast, familiarity,
+etc...). The simplest model implies that the two curves have equal
+variance, though this assumption can be relaxed. Try to modify the noise
+spread or the signal spread.
 
-By modifying the *d'* value, you see that the curves get closer or farther away. Why the distance between the centres of these two distributions reflects sensitivity? Well, higher sensitivity means that you can correctly discriminate a signal (Wally) even when it looks like noise (everything else in the scene). That is, you are able to obtain a high hit rate and a low false alarm rate even when the two distributions overlap.
+By modifying the *d'* value, you see that the curves get closer or
+farther away. Why the distance between the centres of these two
+distributions reflects sensitivity? Well, higher sensitivity means that
+you can correctly discriminate a signal (Wally) even when it looks like
+noise (everything else in the scene). That is, you are able to obtain a
+high hit rate and a low false alarm rate even when the two distributions
+overlap.
 
-When do you report a signal? When you have gathered enough evidence in support of the signal. Enough here is determined by *c*, which is the vertical line. There are a couple of things to note about *c*. Firstly, note that its placement determines the proportion of hit rate and false alarms. The hit rate is represented by the area under the *noise+signal* curve above and beyond the *c* line (how many times something that is a signal is defined as a signal). Similarly, The false alarm rate is defined by the area under the *noise* curve above and beyond the *c* line (how many times noise has been classified as signal). Toggle the Noise and Noise+ Signal distributions. Moreover, note that the value of *c* defines where you end up on a *d'* ROC line. That is all the different combinations that give rise to the same *d'* reflect different levels of bias. 
+When do you report a signal? When you have gathered enough evidence in
+support of the signal. Enough here is determined by *c*, which is the
+vertical line. There are a couple of things to note about *c*. Firstly,
+note that its placement determines the proportion of hit rate and false
+alarms. The hit rate is represented by the area under the *noise+signal*
+curve above and beyond the *c* line (how many times something that is a
+signal is defined as a signal). Similarly, The false alarm rate is
+defined by the area under the *noise* curve above and beyond the *c*
+line (how many times noise has been classified as signal). Toggle the
+Noise and Noise+ Signal distributions. Moreover, note that the value of
+*c* defines where you end up on a *d'* ROC line. That is all the
+different combinations that give rise to the same *d'* reflect different
+levels of bias.
 
 Hope this is useful!
