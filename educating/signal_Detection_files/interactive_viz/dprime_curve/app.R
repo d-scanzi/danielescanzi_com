@@ -120,18 +120,20 @@ server <- function(input, output) {
         ggplot(data = gaussians(), aes(x = grain, y = value, fill = distribution)) +
             geom_line(show.legend = FALSE) +
             geom_vline(xintercept = input$criterion*4) +
-            geom_ribbon(data = filter(gaussians(), grain < input$criterion, distribution == selected_distr()), aes(x=grain, ymax=value, fill = left_label()), ymin=0, alpha = .3) +
-            geom_ribbon(data = filter(gaussians(), grain > input$criterion, distribution == selected_distr()), aes(x=grain, ymax=value, fill = right_label()), ymin=0, alpha = .3) +
+            geom_ribbon(data = filter(gaussians(), grain < input$criterion*4, distribution == selected_distr()), aes(x=grain, ymax=value, fill = left_label()), ymin=0, alpha = .3) +
+            geom_ribbon(data = filter(gaussians(), grain > input$criterion*4, distribution == selected_distr()), aes(x=grain, ymax=value, fill = right_label()), ymin=0, alpha = .3) +
             scale_fill_manual(breaks = c(left_label(), right_label()), values = c( "#ead1dc",'#fff180', 'white', 'white')) +
             annotate('text', x = -1*meanDistr() - 8, y = gaussPeak(), label = 'Noise') +
             annotate('text', x = meanDistr() + 13, y = gaussPeak(), label = 'Signal + Noise') +
             scale_x_continuous(breaks = NULL) + 
-            scale_y_continuous(breaks = NULL) +
+            scale_y_continuous(breaks = NULL, limits = c(0, 0.05)) +
             labs(
                 x = '',
                 y = ''
             ) +
-            theme_minimal() 
+            theme_minimal() +
+            theme(legend.text = element_text(size=15),
+                  legend.title = element_text(size=18))
     })
     
     # Compute ROC

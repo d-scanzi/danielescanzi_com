@@ -5,7 +5,7 @@ account: d-scanzi
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12342552
-bundleId: 8886873
+bundleId: 8890122
 url: https://d-scanzi.shinyapps.io/sdt_updated/
 version: 1
 asMultiple: FALSE
