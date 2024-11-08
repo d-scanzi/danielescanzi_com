@@ -22,6 +22,7 @@ library(here)
 library(wordcloud2)
 library(kableExtra)
 library(waffle)
+library(glue)
 
 # Load data and set it up appropriately
 raw_feedback <- read_csv(here('educating','data', 'feedback_collected.csv'))
@@ -59,18 +60,29 @@ Let's start with a simple and fun (hopefully) section where I swap the roles wit
 #| message: false
 #| warning: false
 
+# Compute percentages
+question_1_percentages <- raw_feedback %>% 
+    filter(question == questions[1]) %>% 
+    replace_na(list(answers="Unanswered")) %>% 
+    table() %>% 
+    prop.table()
+
 marks_plot <- raw_feedback %>% 
     filter(question == questions[1]) %>% 
     replace_na(list(answers= "Unanswered")) %>% 
     count(answers) %>% 
     ggplot(aes(fill = answers, values = n)) +
-    geom_waffle(n_rows = 5,
+    geom_waffle(n_rows = 10,
                 size   = 1, 
                 color  = "#f8f4ea",  
-                flip   = F,
+                flip   = T,
                 make_proportional = TRUE,
                 use_glyph = "graduation-cap") +
-    scale_fill_manual(values = c("#008080", "purple" , "gray")) +
+    scale_fill_manual(values = c("#008080", "purple" , "gray"),
+                      labels = c(glue("Above Average\n({round(question_1_percentages[1]*100)}%)"),
+                                 glue("Average\n({round(question_1_percentages[2]*100)}%)"),
+                                 glue("Below Average\n({round(question_1_percentages[3]*100)}%)"))
+                      ) +
     labs(fill = "") +
     coord_equal() +
     theme_void() +
@@ -96,34 +108,38 @@ In terms of marks, the grades below are scaled by their relative proportion. The
 #| message: false
 #| warning: false
 
-marks_2 <- raw_feedback %>% 
+question_2_percentages <- raw_feedback %>% 
     filter(question == questions[2]) %>% 
-    mutate(total_answers = n(),
-           answers = factor(answers, levels = c('A+', 'A', 'A-', 'B+', 'B','B-'))) %>% 
-    group_by(answers, total_answers) %>% 
-    summarise(count = n()) %>% 
-    mutate(x_value = case_when(answers == 'A+' ~ 0,
-                               answers == 'A'  ~ 5,
-                               answers == 'A-' ~ 10,
-                               answers == 'B+' ~ 15,
-                               answers == 'B'  ~ 20),
-           y_value = 0,
-           proportion = (count / total_answers)*100)
+    replace_na(list(answers="Unanswered")) %>% 
+    table() %>% 
+    prop.table() %>% 
+    as_tibble()
+question_2_percentages$answers <- factor(question_2_percentages$answers, levels = c("A+", "A", "A-", "B+", "B", "B-", "Unanswered"))
 
-grade_plot <- marks_2 %>% 
-    ggplot(aes(x=x_value, y=y_value)) +
-    geom_text(aes(label=answers, size = proportion), 
-              colour = '#fe9f2e', 
-              show.legend = F) +
-    scale_size(range = c(8, 24), guide = F) +
-    coord_cartesian(xlim = c(-1, 21)) +
-    theme_minimal() +
-    theme(axis.text.y = element_blank(),
-          axis.text.x = element_blank(),
-          axis.title  = element_blank(),
-          panel.grid  = element_blank(),
-          panel.background = element_rect(fill='transparent', color=NA),
-          plot.background  = element_rect(fill='transparent', color=NA))
+grade_plot <- question_2_percentages %>% 
+    ggplot(aes(y=question, x=n, fill=answers)) +
+    geom_col(position = "fill", width = .15) +
+    geom_text(aes(label = paste0(round(n * 100), "%")),
+              position = position_fill(vjust = 0.5),
+              size = 4) +
+    labs(fill="") +
+    scale_fill_brewer(palette="BuGn", direction = -1) +
+    guides(fill = guide_legend(nrow = 1, reverse = T)) +
+    theme(
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.border = element_blank(),
+        panel.grid = element_blank(),
+        legend.background = element_rect(fill="transparent", color=NA),
+        panel.background = element_rect(fill="#f8f4ea", color=NA),
+        plot.background  = element_rect(fill="#f8f4ea", color=NA),
+        legend.position = "bottom"
+      ) +
+    scale_y_discrete(expand = expansion(mult = .1)) +
+    scale_x_continuous(labels = scales::percent)
+
 ```
 
 ```{r, dev = "png", dev.args=list(bg="transparent")}
