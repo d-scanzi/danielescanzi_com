@@ -1,0 +1,173 @@
+---
+title: Fourier Transformation and Edges
+fig-cap-location: top
+---
+
+The Fourier transform is an extremely common tool in many sciences. In neuroscience, it is used to analyse the frequency domain of data collected through a variety of different techniques: electroencephalography, magnetoencephalography, electrocardiography, skin conductance, etc... Basically any time-series data. When learning and reading about frequency analyses in this domain, there is one term that pops op over and over again
+
+<center><i><b> EDGE EFFECTS </center></i></b>
+
+I first encountered them when I was learning how to preprocess (aka clean) EEG data for my honours project. I wanted to filter the data to get rid of some low frequency and high frequency components and I keep finding people online warning about the importance to consider edge artefacts. I didn't know what they were, I could only understand that if your data changes abruptly in the time-domain, there could be artefacts introduced in the frequency domain when. At the time I was under time pressure to finish the project, so I trusted the suggestions, verified that my data looked fine after filtering, and then moved on. It is only recently that I went back to really delve into this topic and I started to appreciate the complexity of edges - or better, the complexity of dealing with edges.
+
+Let's get started by visualizing an edge.
+
+```{python}
+import numpy as np
+import copy
+from scipy.fft import fft, fftfreq, fftshift
+from matplotlib import pyplot as plt
+
+plt.style.use('seaborn-v0_8-paper')
+
+## Create signal
+sampling_rate_hz    = 1000
+signal_duration_s   = 1
+signal_frequency_hz = 12
+signal_amplitude_au = 3
+
+sampling_period     = 1/sampling_rate_hz
+time_samples        = np.arange(0, signal_duration_s, sampling_period)
+oscillatory_signal  = signal_amplitude_au * np.cos(2*np.pi*signal_frequency_hz*time_samples)
+
+oscillatory_signal_with_edge = copy.copy(oscillatory_signal)
+oscillatory_signal_with_edge[450:551] = 0
+
+fig, axs = plt.subplots(2,1)
+axs[0].plot(time_samples, oscillatory_signal, color="purple")
+axs[1].plot(time_samples, oscillatory_signal_with_edge, color="purple")
+for ax in axs:
+    ax.set_xlabel("Samples")
+    ax.set_ylabel("Amplitude (AU)")
+fig.tight_layout()
+```
+
+Our signal oscillates at 12 Hz and it's extremely clean. It only misses a small section around 500 ms, as if we had a problem with our recording machine. It happens. Because the signal is a simple oscillation, if we look at its frequency domain we should expect activity only at 12 Hz. Let's see. 
+
+```{python}
+def time_to_frequency_domain(signal, period):
+    fourier_complex_coefficients = fft(signal)
+    fourier_amplitudes  = np.abs(fourier_complex_coefficients[0:len(signal)//2]) / len(signal)
+    fourier_amplitudes *= 2
+    fourier_amplitudes[0] /= 2 
+    fourier_frequencies = fftfreq(len(signal), period)
+    return fourier_amplitudes, fourier_frequencies
+
+oscillatory_signal_frequency_amplitude, no_edge_frequencies = time_to_frequency_domain(oscillatory_signal, sampling_period)
+
+oscillatory_signal_with_edge_frequency_amplitude, edge_frequencies = time_to_frequency_domain(oscillatory_signal_with_edge, sampling_period)
+
+fig, axs = plt.subplots(2,2, gridspec_kw={'height_ratios': [1, 2]})
+axs[0,0].plot(time_samples, oscillatory_signal, color="purple")
+axs[0,1].plot(time_samples, oscillatory_signal_with_edge, color="purple")
+axs[1,0].stem(no_edge_frequencies[0:50], oscillatory_signal_frequency_amplitude[0:50], markerfmt="teal", basefmt="")
+axs[1,1].stem(edge_frequencies[0:50], oscillatory_signal_with_edge_frequency_amplitude[0:50], markerfmt="teal", basefmt="")
+
+axs[1,0].axvline(signal_frequency_hz, linestyle="--", color="gray")
+axs[1,1].axvline(signal_frequency_hz, linestyle="--", color="gray")
+
+axs[0,0].set_xlabel("Samples")
+axs[0,1].set_xlabel("Samples")
+axs[0,0].set_ylabel("Amplitude (AU)")
+
+axs[1,0].set_xlabel("Frequency (Hz)")
+axs[1,1].set_xlabel("Frequency (Hz)")
+axs[1,0].set_ylabel("Amplitude (AU)")
+fig.tight_layout()
+```
+
+What do we notice? The frequency domain of the signal without any missing data is as expected. A flat line at 0 Hz across all frequencies, except for 12 Hz, the frequency of our signal. The frequency domain of the signal with the edge, instead, is less clean. Although there is a clear peak at 12 Hz, other frequencies show some amplitude too. Indeed, the amplitude at 12 Hz is less than 3 AU (the amplitude of our signal). This further suggest that the amplitude has been smeared across other frequencies. Not only that, but we see that the spectrogram has some bumps, an artefact called "ringing".
+
+It is unlikely that in real data we lose long portions of the recording right in the middle of a trial. If that happens, it would also be easy, and probably wiser, to remove the trial altogether to avoid interpreting non existing data. This does not mean that we are safe from edge artefacts. Conversely, they tend to exist in every trial. Can you guess where?
+
+```{python}
+fig, ax = plt.subplots()
+ax.plot(time_samples, oscillatory_signal, color="purple")
+ax.annotate("Here",
+            xy=(0, 3), xycoords="data",
+            xytext=(0.5, 3.5), textcoords="data",
+            arrowprops=dict(arrowstyle="->", connectionstyle="arc", facecolor="black"))
+ax.annotate("",
+            xy=(1, 3), xycoords="data",
+            xytext=(0.56, 3.54), textcoords="data",
+            arrowprops=dict(arrowstyle="->", connectionstyle="arc", facecolor="black"))
+ax.axis("off")
+
+```
+
+Exactly, at the beginning and end of each trial. In many experiments we need to divide the data into chunks (epoch) representing some period of interest (e.g. the onset of a stimulus or a response). Consequently, the beginning and end of each chunk are literal discontinuities, as the data begins and ends abruptly. For a smooth signal like the one we have been working with, this is not an issue. Moreover, we know exactly it's frequency and amplitude, so we can always verify the results and amend any edge effect. With real data the situation is tricky. Each trial is different. Edges can take many different forms and we don't know the ground truth signal; that is, we cannot be 100% sure whether the results we observe in the frequency domain are real representations of the data or artefacts. So, how do we go about this? The answer is seemingly simple, we *window* the data.
+
+If you pay attention to the method section of papers performing frequency analyses, you might read sentences like "a Fast Fourier Transform (FFT) was applied to the Hanning windowed data to extract the complex coefficients...". You might read... unfortunately reporting standards are not great and many papers don't really explain properly what the did, potentially because who ran the analyses used prepackaged functions with default settings without really engaging in the process happening in the background. Anyway, what do we mean with *windowed data*? Put it simply, we multiply our data by some function that tries to smooth its edges while preserving the central part of the signal. The function we use can vary and a common one (likely because it's Matlab [pwelch](https://au.mathworks.com/help/signal/ref/pwelch.html) default) is the Hanning window. It looks like this
+
+```{python}
+def create_hanning_window(sample_indices, lenght):
+    z   = (2 * np.pi *  sample_indices) /  lenght
+    win = (np.cos((z - np.pi)/2))**2
+    return win
+# Generate window
+hanning_window = create_hanning_window(np.arange(100), 100)
+
+fig, ax = plt.subplots(figsize=(8.4, 5))
+ax.plot(hanning_window, color="purple")
+ax.set_xlabel("Samples")
+ax.set_ylabel("Amplitude (AU)")
+ax.set_title("Hanning Window")
+```
+
+As you can see, the window starts at 0, smoothly goes up to 1 and then smoothly goes back to zero. Now, what happens if we multiply this window with our signal? We taper the signal. The amplitude at the edges will be decreased, while the amplitude in the middle of the signal will be preserved.
+
+```{python}
+hanning_window = create_hanning_window(np.arange(len(oscillatory_signal)), len(oscillatory_signal))
+fig, axs = plt.subplot_mosaic([["signal", "window"], ["result", "result"]],
+                              layout='constrained')
+axs["signal"].plot(time_samples, oscillatory_signal, color="purple")
+axs["window"].plot(time_samples, hanning_window, color="teal")
+axs["result"].plot(time_samples, oscillatory_signal*hanning_window, color="purple")
+axs["result"].plot(time_samples, hanning_window*oscillatory_signal.max(), color="teal", alpha=0.25)
+
+axs["signal"].set_title("Signal")
+axs["window"].set_title("Hanning Window")
+axs["result"].set_title("Signal x Hanning Window")
+```
+
+Such a satisfying shape! There are 2 key elements to notice here. As noted above, the amplitude at the onset and offset of the signal is dampened. Secondly, the oscillatory frequency is not affected. So, let's see the resulting power spectrum
+
+```{python}
+windowed_oscillatory_signal = oscillatory_signal * hanning_window
+windowed_oscillatory_signal_amplitudes, windowed_signal_frequencies = time_to_frequency_domain(windowed_oscillatory_signal, sampling_period)
+
+fig, ax = plt.subplots()
+ax.stem(windowed_signal_frequencies[0:50], windowed_oscillatory_signal_amplitudes[0:50], markerfmt="teal", basefmt="")
+ax.set_xlabel("Frequency (Hz)")
+ax.set_ylabel("Amplitude (AU)")
+```
+
+Alllright. The peaks appears around the correct frequency, 12Hz. However, there are multiple peaks and... the amplitude is wrong. Remember, we expect an amplitude of 3 AU at 12 Hz. It looks like we worsened the original results in this case. It makes sense though. Let's think about this. For once, by windowing the signal we preserve the amplitude in the middle portion, but we reduce the the amplitude at the edges. Therefore,there is less total amplitude across the whole trial. Secondly, the window itself has its own representation in the frequency domain. Because the frequency domain is just a different view of the time domain, when we modify the time domain we modify the frequency domain. In other words, by multiplying a signal with a window we introduce alterations in the frequency domain. We can build an insight into this by looking at the frequency domain of the window itself
+
+```{python}
+# Zero pad to interpolate across frequency bins and create a smoother spectrum
+hanning_window_padded = np.pad(hanning_window, 2000, mode='constant')
+hanning_coeff = fft(hanning_window_padded)
+hanning_amplitudes  = np.abs(hanning_coeff) / len(hanning_window_padded)
+hanning_amplitudes *= 2
+hanning_amplitudes[0] /= 2
+if len(hanning_window_padded) % 2 == 0:  # Halve the Nyquist component if it exists
+    hanning_amplitudes[len(hanning_window_padded) // 2] /= 2
+
+# Frequency axis
+hanning_frequencies = fftfreq(len(hanning_window_padded), sampling_period)
+hanning_frequencies = fftshift(hanning_frequencies)  # Shift zero frequency to the center
+hanning_amplitudes = fftshift(hanning_amplitudes)
+
+zero_index = int(np.where(hanning_frequencies == 0)[0])
+fig, ax = plt.subplots()
+ax.plot(hanning_frequencies[zero_index-100:zero_index+100], 20*np.log10(hanning_amplitudes[zero_index-100:zero_index+100]))
+ax.set_xlabel("Frequency Bins (Hz)")
+ax.set_ylabel("Amplitude (dB)")
+```
+
+To better visualise the frequency representation of the window we need to do some more work on our FFT. Firstly, I zero-padded the Hanning window (added zeros at the beginning and end of the signal). This is a trick used to interpolate the spectrum without altering the frequency representation. Basically, we get a smoother spectrum that allows us to see narrow peaks. Secondly, I plotted the amplitudes in Decibels to better visualise small values. 
+
+There are two main areas of interest in this plot. The first one, is the central part around zero. Here we observe a main peak called *main lobe*. 
+
+
+
