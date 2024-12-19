@@ -7,15 +7,46 @@ format:
 
 ***UPDATED AT THE END OF 2024***
 
-I love teaching. I love spending time in class discussing interesting topics and having conversations with students. It's one of my favourite parts of being a young researcher. I often think about how to be a better educator, set up my tutorials, and create a positive environment in my classes. How can I grab and maintain students' attention (especially at 8.00 am on a Monday)? How can I explore a concept from a different perspective from the one provided in class by professors? How can I create and encourage a class environment without a strict hierarchical structure?
+I love teaching. I love spending time in class discussing interesting
+topics and having conversations with students. It's one of my favourite
+parts of being a young researcher. I often think about how to be a
+better educator, set up my tutorials, and create a positive environment
+in my classes. How can I grab and maintain students' attention
+(especially at 8.00 am on a Monday)? How can I explore a concept from a
+different perspective from the one provided in class by professors? How
+can I create and encourage a class environment without a strict
+hierarchical structure?
 
-I'm by no means close to implementing my ideal lab time. A time focused on active learning based on challenging but meaningful activities that expand what was covered in class. A time when we, the educators, guide conversations and discussions rather than simply providing information. Part of the cause is definitely my fault for not being able to fully implement and create what I wish my labs would be. The other part is played by the university system not considering laboratories and tutorials that important, which is evident in underfunding for tutors, stagnant teaching material and the lack of feedback we receive. 
+I'm by no means close to implementing my ideal lab time. A time focused
+on active learning based on challenging but meaningful activities that
+expand what was covered in class. A time when we, the educators, guide
+conversations and discussions rather than simply providing information.
+Part of the cause is definitely my fault for not being able to fully
+implement and create what I wish my labs would be. The other part is
+played by the university system not considering laboratories and
+tutorials that important, which is evident in underfunding for tutors,
+stagnant teaching material and the lack of feedback we receive.
 
-Because of this, I have been proactively collecting reviews and feedback from the students in my tutorials. At the end of each semester, I encourage them to constructively review my work as an educator. I do so through an anonymous survey, which I keep short and light, knowing that no one wants to spend much time answering questions, especially when the exam period is approaching. In class, I encourage students to provide any type of feedback, positive or negative, especially negative, as I want to use it as a building block to improve semester through semester. 
+Because of this, I have been proactively collecting reviews and feedback
+from the students in my tutorials. At the end of each semester, I
+encourage them to constructively review my work as an educator. I do so
+through an anonymous survey, which I keep short and light, knowing that
+no one wants to spend much time answering questions, especially when the
+exam period is approaching. In class, I encourage students to provide
+any type of feedback, positive or negative, especially negative, as I
+want to use it as a building block to improve semester through semester.
 
-We all know that often feedback is not really used to change anything. Most of the time, it is just assessed by the administration to see if some KPIs have been met. I hate that. So, in the name of transparency and self-accountability, I decided to post all the anonymous feedback here (this is clearly stated in the survey). In the page below, I try to summarise the overall reviews, and I address the points I believe are important for me to consider or reply to. 
+We all know that often feedback is not really used to change anything.
+Most of the time, it is just assessed by the administration to see if
+some KPIs have been met. I hate that. So, in the name of transparency
+and self-accountability, I decided to post all the anonymous feedback
+here (this is clearly stated in the survey). In the page below, I try to
+summarise the overall reviews, and I address the points I believe are
+important for me to consider or reply to.
 
-*Disclaimer: I won't censor any comments except those containing private or sensitive information irrelevant to my role as an educator. I will add a note if this happens.*
+*Disclaimer: I won't censor any comments except those containing private
+or sensitive information irrelevant to my role as an educator. I will
+add a note if this happens.*
 
 ```{r}
 #| echo: false
@@ -58,10 +89,13 @@ descriptors <- raw_feedback %>%
 wordcloud2(descriptors, minRotation = -pi/2, maxRotation = -pi/2, backgroundColor = '#f8f4ea')
 ```
 
-
 ## Students' marks
 
-I like to give students the opportunity to "sit on the other side of the desk" and have the opportunity to review my work with a grade. The first question is a benchmark to see how I am doing compared to the other classes they take. I have not completed my undergrad in New Zealand, so I do not have a clear idea of what a good or bad tutorial can be. 
+I like to give students the opportunity to "sit on the other side of the
+desk" and have the opportunity to review my work with a grade. The first
+question is a benchmark to see how I am doing compared to the other
+classes they take. I have not completed my undergrad in New Zealand, so
+I do not have a clear idea of what a good or bad tutorial can be.
 
 ```{r}
 #| echo: false
@@ -111,11 +145,22 @@ marks_plot <- raw_feedback %>%
 marks_plot
 ```
 
-80% of those who completed the survey considered my tutorials above average according to their experience. About one-sixth retained them to be within the average range, and no one was below average. I believe this is a great benchmark that shows that my classes are (1) positively different or at least similar to other classes and (2) appreciated by students.
+80% of those who completed the survey considered my tutorials above
+average according to their experience. About one-sixth retained them to
+be within the average range, and no one was below average. I believe
+this is a great benchmark that shows that my classes are (1) positively
+different or at least similar to other classes and (2) appreciated by
+students.
 
----
+------------------------------------------------------------------------
 
-The second question asks literally for a grade. I think it could be a cathartic moment being able to grade the person who has been grading your coursework. Moreover, if taken seriously, grading can make you reflect on the way you evaluate experiences. Was something really that good or that bad? Were the tutorials really so dull or so exciting? Maybe I was just tired or maybe I just liked the content but not the delivery.
+The second question asks literally for a grade. I think it could be a
+cathartic moment being able to grade the person who has been grading
+your coursework. Moreover, if taken seriously, grading can make you
+reflect on the way you evaluate experiences. Was something really that
+good or that bad? Were the tutorials really so dull or so exciting?
+Maybe I was just tired or maybe I just liked the content but not the
+delivery.
 
 ```{r}
 #| echo: false
@@ -165,29 +210,77 @@ grade_plot <- question_2_percentages %>%
 grade_plot
 ```
 
-The grade aligns with the coarse benchmark above. 87% of students who completed the survey would be happy to grade my work within the A range (A-, A, A+), and over half of these grades are an A+. Although we often dislike skewed distribution, I think this is a good one. There are no grades below a B, so I think I have happily passed my exam for now. 
+The grade aligns with the coarse benchmark above. 87% of students who
+completed the survey would be happy to grade my work within the A range
+(A-, A, A+), and over half of these grades are an A+. Although we often
+dislike skewed distribution, I think this is a good one. There are no
+grades below a B, so I think I have happily passed my exam for now.
 
 ## What students appreciate
 
-There are a few core trends that started to come up over time. Firstly, students appreciate being in an environment that supports and encourages asking questions and sharing thoughts and ideas without worrying. I'm very glad this is a shared sentiment in my classes as this is one of my personal goals towards an ideal cooperative, collaborative and welcoming class.
+There are a few core trends that started to come up over time. Firstly,
+students appreciate being in an environment that supports and encourages
+asking questions and sharing thoughts and ideas without worrying. I'm
+very glad this is a shared sentiment in my classes as this is one of my
+personal goals towards an ideal cooperative, collaborative and welcoming
+class.
 
-> I’ve had the pleasure of being in your tutorial stream 2 years in a row and have enjoyed it both times. You encourage discussion so naturally and are incredibly supportive when students share their ideas even if they’re not necessarily the answer you were looking for. I really appreciate the depth with which you explain the lab topics and truly think my learning has been much improved in the lab sessions!
+> I’ve had the pleasure of being in your tutorial stream 2 years in a
+> row and have enjoyed it both times. You encourage discussion so
+> naturally and are incredibly supportive when students share their
+> ideas even if they’re not necessarily the answer you were looking for.
+> I really appreciate the depth with which you explain the lab topics
+> and truly think my learning has been much improved in the lab
+> sessions!
 
-> Support! You were very supportive and accurately explained what was required to do well in this class, and explained what we did not need to know as extensively - which was much appreciated as often times labs can be seen as just an overload of information.
+> Support! You were very supportive and accurately explained what was
+> required to do well in this class, and explained what we did not need
+> to know as extensively - which was much appreciated as often times
+> labs can be seen as just an overload of information.
 
-> You did a great job in tutorials giving people opportunities to ask for help of they needed it and checking to make sure we were on the right track. Also you kept it engaging by relating the various topics and ideas to your own interest and the wider ideas around the topic, encouraging broader thinking about it.
+> You did a great job in tutorials giving people opportunities to ask
+> for help of they needed it and checking to make sure we were on the
+> right track. Also you kept it engaging by relating the various topics
+> and ideas to your own interest and the wider ideas around the topic,
+> encouraging broader thinking about it.
 
-A second topic seems to be engagement. All those years spent performing as a magician are paying back now. I've always treated teaching as a magic act. You need to be able to draw and maintain attention, convey a story and have fun. I always find interesting how some of the most popular "academic" videos are of professors doing something unexpected and interesting. I think we (educators) should all experiment in our classes with the way we present, the way we interact with students and the activities we do. 
+A second topic seems to be engagement. All those years spent performing
+as a magician are paying back now. I've always treated teaching as a
+magic act. You need to be able to draw and maintain attention, convey a
+story and have fun. I always find interesting how some of the most
+popular "academic" videos are of professors doing something unexpected
+and interesting. I think we (educators) should all experiment in our
+classes with the way we present, the way we interact with students and
+the activities we do.
 
-> You explained all the concepts really well, and often in different ways if we didn't understand. You also made tutorials fun and worth coming to and I always left feeling like I've learnt something. Yours is also the only tutorials that I looked forward coming to!
+> You explained all the concepts really well, and often in different
+> ways if we didn't understand. You also made tutorials fun and worth
+> coming to and I always left feeling like I've learnt something. Yours
+> is also the only tutorials that I looked forward coming to!
 
-> Really engaging, even though I hated the mini presentations idea initially it did help me prepare for a presentation assignment in another paper! You are very knowledgeable, helpful and clearly passionate about teaching others about the brain!
+> Really engaging, even though I hated the mini presentations idea
+> initially it did help me prepare for a presentation assignment in
+> another paper! You are very knowledgeable, helpful and clearly
+> passionate about teaching others about the brain!
 
-A specific reply to the last comment. I totally understand how mini-presentations might not be a hit for many people. Public speaking sucks, especially when you don't have much time to prepare. However, as I said in most of my tutorials, the only way to improve in public speaking is... by publicly speaking. There is no real way around that. To be honest, presentations are not necessarily my own idea, but I hope that by creating a welcoming environment, I'm making them less stressful. The way I see it is that tutorials are the perfect opportunity to practice presenting, as we are among people we know and there is no judgment involved. I'm glad they helped you with another paper!
+A specific reply to the last comment. I totally understand how
+mini-presentations might not be a hit for many people. Public speaking
+sucks, especially when you don't have much time to prepare. However, as
+I said in most of my tutorials, the only way to improve in public
+speaking is... by publicly speaking. There is no real way around that.
+To be honest, presentations are not necessarily my own idea, but I hope
+that by creating a welcoming environment, I'm making them less
+stressful. The way I see it is that tutorials are the perfect
+opportunity to practice presenting, as we are among people we know and
+there is no judgment involved. I'm glad they helped you with another
+paper!
 
-Indeed, I've just found another fellow student sharing the same sentiment. I'll keep this in mind for next year; maybe I'll try to sneak some tips and techniques during the tutorials.
+Indeed, I've just found another fellow student sharing the same
+sentiment. I'll keep this in mind for next year; maybe I'll try to sneak
+some tips and techniques during the tutorials.
 
-> Integrating mini presentations which helps us build our public speaking and be more confident with our knowledge
+> Integrating mini presentations which helps us build our public
+> speaking and be more confident with our knowledge
 
 ```{r}
 #| echo: false
@@ -207,34 +300,92 @@ kbl(appreciation) %>%
 
 ## What students think I should do better
 
-In this section, I will try to reply to some of the comments I believe are interesting, or that report sentiments shared by different students.
+In this section, I will try to reply to some of the comments I believe
+are interesting, or that report sentiments shared by different students.
 
-> I thought you were excellent, the only reason I didn’t give you an A+ is because I felt like you could could go even further by dumbing it down and putting course content into other contexts so it would be easier to learn/retain
+> I thought you were excellent, the only reason I didn’t give you an A+
+> is because I felt like you could could go even further by dumbing it
+> down and putting course content into other contexts so it would be
+> easier to learn/retain
 
-This is a great point. Sometimes I'm scared of providing external context/examples because my areas of expertise and interests are usually highly technical and I don't want to scare people off from a topic. However, next year I'll do my best to provide external context. Maybe I can get a better sense of everyone's interests and try to also draw from the knowledge of other students in the class. I like the idea of students helping other students and me understanding something in more detail.
+This is a great point. Sometimes I'm scared of providing external
+context/examples because my areas of expertise and interests are usually
+highly technical and I don't want to scare people off from a topic.
+However, next year I'll do my best to provide external context. Maybe I
+can get a better sense of everyone's interests and try to also draw from
+the knowledge of other students in the class. I like the idea of
+students helping other students and me understanding something in more
+detail.
 
-> Maybe instead of presenting in front of the class you could do a group discussion activity instead.
+> Maybe instead of presenting in front of the class you could do a group
+> discussion activity instead.
 
-> Sometimes the discussion time in tutorials felt too long and often we'd finish the task and end up going off task. Maybe less small group discussion and then a longer period for class discussion would have been more to my personal preference, but its not a major issue cause there was normally plenty of time anyway.
+> Sometimes the discussion time in tutorials felt too long and often
+> we'd finish the task and end up going off task. Maybe less small group
+> discussion and then a longer period for class discussion would have
+> been more to my personal preference, but its not a major issue cause
+> there was normally plenty of time anyway.
 
-Indeed, discussions is something I need to work more on. I tend to lean towards small group discussions because they tend to engage more students, especially those who are more afraid to talk in front of everyone. However, the downside is that people do not get to hear possibly interesting thoughts and ideas that have been shared within other groups. Next year I will try to (1) add more discussion time and (2) shortening the small groups discussions and giving more space to a class discussion. Just one note, as I'm not totally in control of the lab material and activities, sometimes it's just not possible to add activities that have not been scheduled by professors. Some professors are happy to give us more freedom for how we run the labs, but others are stricter and what they want us to do.  
+Indeed, discussions is something I need to work more on. I tend to lean
+towards small group discussions because they tend to engage more
+students, especially those who are more afraid to talk in front of
+everyone. However, the downside is that people do not get to hear
+possibly interesting thoughts and ideas that have been shared within
+other groups. Next year I will try to (1) add more discussion time and
+(2) shortening the small groups discussions and giving more space to a
+class discussion. Just one note, as I'm not totally in control of the
+lab material and activities, sometimes it's just not possible to add
+activities that have not been scheduled by professors. Some professors
+are happy to give us more freedom for how we run the labs, but others
+are stricter and what they want us to do.
 
-> Rather than having us get up and present, make more interactive lessons like the aphantasia ones where we did a little memory test
-> Presentations aren't helpful, there should be another more interactive way. We don't have enough time to do research or to prepare and present and the entire class ends up repeating each other or telling false info.
+> Rather than having us get up and present, make more interactive
+> lessons like the aphantasia ones where we did a little memory test
+> Presentations aren't helpful, there should be another more interactive
+> way. We don't have enough time to do research or to prepare and
+> present and the entire class ends up repeating each other or telling
+> false info.
 
-I don't agree that presentations are not useful (see comment in the section above). However, I agree that tutorials should be more interactive. This is kind of a tricky point to address. I agree with you, there should be more interactive ways to run tutorials. Last year, I pushed towards this direction by crafting the simulated EEG-based liar detection activity for PSYCH 305. This year, I created and organized the activity with the portable EEGs. However, I need to strike a balance between what I would like to do and what the university is happy to fund. The two activities above required quite a bit of time to be organized, some of which was out of my free time. In the background, I'm trying to push for making psych tutorials real laboratories. However, I am not the one making the final decisions nor the one deciding how many hours tutors are paid. What I should do, though, is find ways to sneak in interactivity during standard tutorials. These activities should be easy to organize and incorporate with professors' requirements. I'll think of some ideas during the summer!
+I don't agree that presentations are not useful (see comment in the
+section above). However, I agree that tutorials should be more
+interactive. This is kind of a tricky point to address. I agree with
+you, there should be more interactive ways to run tutorials. Last year,
+I pushed towards this direction by crafting the simulated EEG-based liar
+detection activity for PSYCH 305. This year, I created and organized the
+activity with the portable EEGs. However, I need to strike a balance
+between what I would like to do and what the university is happy to
+fund. The two activities above required quite a bit of time to be
+organized, some of which was out of my free time. In the background, I'm
+trying to push for making psych tutorials real laboratories. However, I
+am not the one making the final decisions nor the one deciding how many
+hours tutors are paid. What I should do, though, is find ways to sneak
+in interactivity during standard tutorials. These activities should be
+easy to organize and incorporate with professors' requirements. I'll
+think of some ideas during the summer!
 
-> Only suggestion I have is to speak slower. Your excitement and English are amazing, but when you speak really fast with excitement, it made it difficult to understand and keep up sometimes.
-> Occasionally you start to rush when you get excited, which is fun to see but it can lead to us missing certain points sometimes
-> Honestly, thought you were amazing. Maybe you could just slow down sometimes with your explanations because it can be a bit hard to keep up with
-> occasionally (not often) i couldn’t understand what you were saying when you spoke fast
-> Maybe speaking a little bit slower is better
-> Talking a bit slower would help a lot for better understanding :)
+> Only suggestion I have is to speak slower. Your excitement and English
+> are amazing, but when you speak really fast with excitement, it made
+> it difficult to understand and keep up sometimes. Occasionally you
+> start to rush when you get excited, which is fun to see but it can
+> lead to us missing certain points sometimes Honestly, thought you were
+> amazing. Maybe you could just slow down sometimes with your
+> explanations because it can be a bit hard to keep up with occasionally
+> (not often) i couldn’t understand what you were saying when you spoke
+> fast Maybe speaking a little bit slower is better Talking a bit slower
+> would help a lot for better understanding :)
 
-All these comments are from 2023. I totally agree with you all, I know I let myself be taken by the excitement of the topics. Plus, Italians speak fast, so my background does not help. I hope this year I've done a better job on this. No one pointed this out. If anything, someone highlighted that I have made changes for the best (below). However, I have caught myself speeding up, and it is something I need to pay constant attention to. So I'll leave these comments as a reminder for the next year.
+All these comments are from 2023. I totally agree with you all, I know I
+let myself be taken by the excitement of the topics. Plus, Italians
+speak fast, so my background does not help. I hope this year I've done a
+better job on this. No one pointed this out. If anything, someone
+highlighted that I have made changes for the best (below). However, I
+have caught myself speeding up, and it is something I need to pay
+constant attention to. So I'll leave these comments as a reminder for
+the next year.
 
-> Nothing! I think you truly have taken into account feedback from previous years (or perhaps I am just used to your teaching style) and it’s been great.
-
+> Nothing! I think you truly have taken into account feedback from
+> previous years (or perhaps I am just used to your teaching style) and
+> it’s been great.
 
 ```{r}
 #| echo: false
@@ -251,7 +402,8 @@ kbl(improve) %>%
 
 ## Extra comments
 
-As my survey is meant to be quick, I leave the opportunity to express other ideas freely.
+As my survey is meant to be quick, I leave the opportunity to express
+other ideas freely.
 
 ```{r}
 #| echo: false
