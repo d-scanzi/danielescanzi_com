@@ -28,8 +28,9 @@ library(janitor)
 library(here)
 library(wordcloud2)
 library(kableExtra)
-library(waffle)
+library(ggwaffle)
 library(glue)
+library(emojifont) 
 
 # Load data and set it up appropriately
 raw_feedback <- read_csv(here('educating','data', 'feedback_collected.csv'))
@@ -60,7 +61,9 @@ wordcloud2(descriptors, minRotation = -pi/2, maxRotation = -pi/2, backgroundColo
 
 ## TL/DR
 
-Students appreciated the enthusiasm, energy and environment I created in class. I put lots of effort in reducing the power gradient during class time and promoting cooperation^[In aviation, there is a concept known as the *cockpit gradient*. This refers to the hierarchy and communication flow between the captain and the first officer: if the captain exerts too much dominance, first officers may hesitate to speak up, which can lead to errors or accidents. A more balanced or shallow gradient encourages co-pilots to share their ideas, improving overall safety. I believe the same principle applies in the classroom. Reducing the class gradient helps students feel more comfortable and confident in sharing their thoughts and opinions without fear of judgment.]. This effort seems to have paid off throughout the years. It appears I am a morning person (indeed I am), and being energetic helped with engagement during early morning tutorials. I sometimes speak too fast when I talk about something I enjoy, but I seem to keep this trait under control. 
+Students appreciated the enthusiasm, energy and environment I created in class. I put lots of effort in reducing the power gradient during class time and promoting cooperation^[In aviation, there is a concept known as the *cockpit gradient*. This refers to the hierarchy and communication flow between the captain and the first officer: if the captain exerts too much dominance, first officers may hesitate to speak up, which can lead to errors or accidents. A more balanced or shallow gradient encourages co-pilots to share their ideas, improving overall safety. I believe the same principle applies in the classroom. Reducing the class gradient helps students feel more comfortable and confident in sharing their thoughts and opinions without fear of judgment.]. This effort seems to have paid off throughout the years. It appears I am a morning person (indeed I am), and being energetic helped with engagement during early morning tutorials. I sometimes speak too fast when I talk about something I enjoy, but I seem to keep this trait under control.
+
+
 ## Students' marks
 
 I like to give students the opportunity to "sit on the other side of the desk" and have the opportunity to review my work with a grade. The first questions are a benchmark to see how I am doing compared to the other classes they take. The reason I frame the question as a comparison is not to be in competition with other educators, but it is because it is hard to provide a grade without a baseline comparison. For instance, grading an essay is an activity that does not happen in a vacuum, but it is influenced by previous grades and expectations derived from experience with similar work. I want students to think about their unique experiences and backgrounds and place my work within that context. 
@@ -100,7 +103,10 @@ marks_plot <- ggplot(students_grades, aes(x, y, colour = answers)) +
     coord_equal() +
     theme_waffle() +
     theme(legend.position = "bottom",
-          legend.title = element_blank())
+          legend.title = element_blank(),
+          legend.background = element_rect(fill="transparent", color=NA),
+          panel.background = element_rect(fill="#f8f4ea", color=NA),
+          plot.background  = element_rect(fill="#f8f4ea", color=NA))
 ```
 
 ```{r, dev = "png", dev.args=list(bg="transparent")}
@@ -110,7 +116,7 @@ marks_plot <- ggplot(students_grades, aes(x, y, colour = answers)) +
 marks_plot
 ```
 
-84% of those who completed the survey considered my tutorials *above average* according to their experience. The reminder retained them within the average range, and no one was below average. This is a great benchmark that shows that my classes are (a) positively different or at least similar to other classes and (b) appreciated by students.
+84% of those who completed the survey considered my tutorials *above average* according to their experience. The reminder considered them within the average range. This is a great benchmark that shows that my classes are (a) positively different or at least similar to other classes and (b) appreciated by students.
 
 ------------------------------------------------------------------------
 
